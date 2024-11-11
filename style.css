@@ -1,0 +1,18 @@
+
+#conection{
+    border: 1rem solid rgba(125, 121, 121, 0.409);
+
+}
+
+
+#RH{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 100px;
+    color: rgb(154, 76, 76);
+    background-color: rgb(247, 236, 207);
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+    border: 1rem solid rgb(90, 60, 60);
+}
+
