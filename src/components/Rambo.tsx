@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -16,10 +16,36 @@ const slides = [
 ];
 
 const facts = [
-  { icon: "fa-heart", title: "נאמנות גבוהה", description: "פיטבולים מפגינים רמת נאמנות יוצאת דופן כלפי בעליהם ובני משפחתם." },
-  { icon: "fa-brain", title: "אינטליגנציה", description: "גזע חכם במיוחד עם יכולת למידה מהירה ורצון לרצות את בעליו." },
-  { icon: "fa-child", title: "ידידותיות למשפחה", description: "מתאימים במיוחד לחיים עם ילדים ונחשבים ל'כלבי מטפלת' היסטורית." },
-  { icon: "fa-dumbbell", title: "חוסן ובריאות", description: "גזע בריא עם מבנה גוף חזק ועמידות גבוהה." },
+  {
+    icon: "fa-heart",
+    title: "נאמנות גבוהה",
+    description: "פיטבולים מפגינים רמת נאמנות יוצאת דופן כלפי בעליהם ובני משפחתם. הם יוצרים קשר רגשי עמוק ונחשבים לבעלי חיים מסורים במיוחד.",
+  },
+  {
+    icon: "fa-smile",
+    title: "התאמה לסביבה משפחתית",
+    description: "היסטורית, פיטבולים שימשו ככלבי משפחה והוכיחו סבלנות וידידותיות כלפי ילדים. עם חינוך וסוציאליזציה נכונים, הם מתאימים היטב לחיים משפחתיים.",
+  },
+  {
+    icon: "fa-brain",
+    title: "אינטליגנציה ויכולת למידה",
+    description: "פיטבולים בעלי יכולת למידה גבוהה ומוטיבציה חזקה. הם מגיבים היטב לאילוף חיובי ומפגינים נכונות לשיתוף פעולה עם בעליהם.",
+  },
+  {
+    icon: "fa-running",
+    title: "רמת אנרגיה גבוהה",
+    description: "הגזע מתאפיין ברמת אנרגיה גבוהה ודורש פעילות גופנית סדירה. פיטבולים מהווים שותפים מצוינים לפעילויות ספורטיביות וטיולים.",
+  },
+  {
+    icon: "fa-shield-alt",
+    title: "אומץ ונאמנות",
+    description: "פיטבולים ידועים באומץ ובנכונותם להגן על משפחתם. הם משלבים ערנות עם יכולת אבחנה ויחס ידידותי כלפי מכרי המשפחה.",
+  },
+  {
+    icon: "fa-paw",
+    title: "קרבה רגשית",
+    description: "בניגוד למראה החיצוני החזק, פיטבולים נוטים ליצור קשר רגשי הדוק עם בעליהם ונהנים מקרבה פיזית ואינטראקציה חברתית.",
+  },
 ];
 
 const Rambo = () => {
@@ -32,6 +58,22 @@ const Rambo = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
+
+  // Auto-play slider
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") nextSlide();
+      if (e.key === "ArrowRight") prevSlide();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <div className="rambo-page" dir="rtl">
@@ -142,7 +184,23 @@ const Rambo = () => {
             ))}
           </div>
         </motion.section>
+
+        <motion.section
+          className="rambo-quote"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <blockquote>
+            <i className="fas fa-quote-right quote-icon"></i>
+            <p>"הקשר עם בעל חיים נאמן הוא מסע של אחריות, מחויבות, ואהבה הדדית שמעשירה את חיי היום-יום."</p>
+          </blockquote>
+        </motion.section>
       </div>
+
+      <footer className="rambo-footer">
+        <p>&copy; 2025 Sahar Halili</p>
+      </footer>
     </div>
   );
 };
