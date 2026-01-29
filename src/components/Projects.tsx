@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Section from "./Section";
 import { projectsData } from "../data/portfolioData";
 
@@ -21,7 +22,7 @@ const Projects = () => {
                 {project.title}
               </a>
             ) : project.isInternal ? (
-              <a href={project.internalLink}>{project.title}</a>
+              <Link to={project.internalLink || "/"}>{project.title}</Link>
             ) : (
               project.title
             )}

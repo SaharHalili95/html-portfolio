@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Profile from "./components/Profile";
 import Experience from "./components/Experience";
@@ -7,10 +8,11 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Rambo from "./components/Rambo";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./App.css";
 
-function App() {
+function Portfolio() {
   const [activeSection, setActiveSection] = useState("profile");
 
   useEffect(() => {
@@ -55,6 +57,17 @@ function App() {
       </div>
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter basename="/html-portfolio">
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/rambo" element={<Rambo />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
