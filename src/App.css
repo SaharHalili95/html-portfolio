@@ -268,6 +268,33 @@ section p {
   font-weight: 500;
 }
 
+.project-links {
+  margin-top: 1rem;
+}
+
+.demo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.demo-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 122, 204, 0.3);
+}
+
+.demo-link i {
+  font-size: 0.85rem;
+}
+
 /* Contact */
 .contact-info {
   list-style: none;

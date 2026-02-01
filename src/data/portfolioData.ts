@@ -59,6 +59,7 @@ export const projectsData = [
       "Developed a full-stack price comparison web app using FastAPI (Python) and React TypeScript. Leveraged Cursor AI to accelerate development, specifically for complex data validation and Pydantic model structuring. Built automated product search and price tracking features across multiple stores with a focus on type safety and responsive design.",
     technologies: ["FastAPI", "React", "TypeScript", "Python", "Pydantic"],
     link: "https://github.com/SaharHalili95/price-comparison-platform",
+    demoLink: "https://saharhalili95.github.io/price-comparison-platform/",
   },
   {
     title: "Interview Prep Tracker",
@@ -67,6 +68,7 @@ export const projectsData = [
       "Built a full-stack application for tracking interview preparation progress. Features include question management, progress tracking, and categorization. Built with FastAPI backend and MongoDB for data persistence.",
     technologies: ["FastAPI", "MongoDB", "React", "TypeScript"],
     link: "https://github.com/SaharHalili95/interview-prep-tracker",
+    demoLink: "https://saharhalili95.github.io/interview-prep-tracker/",
   },
   {
     title: "Rambo",

@@ -42,6 +42,18 @@ const Projects = () => {
               ))}
             </div>
           )}
+          {project.demoLink && (
+            <div className="project-links">
+              <a
+                href={project.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="demo-link"
+              >
+                <i className="fas fa-external-link-alt"></i> View Project Site
+              </a>
+            </div>
+          )}
         </motion.div>
       ))}
     </Section>
