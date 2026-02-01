@@ -321,7 +321,7 @@ section p {
 }
 
 /* Footer */
-footer {
+.main-footer {
   text-align: center;
   padding: 2rem;
   background: var(--sidebar-bg);

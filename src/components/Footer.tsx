@@ -5,6 +5,7 @@ const Footer = () => {
 
   return (
     <motion.footer
+      className="main-footer"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1 }}
