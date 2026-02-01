@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { profileData, navItems } from "../data/portfolioData";
+import { getImagePath } from "../utils/paths";
 
 interface SidebarProps {
   activeSection: string;
@@ -8,19 +9,13 @@ interface SidebarProps {
 
 const Sidebar = ({ activeSection, onNavClick }: SidebarProps) => {
   return (
-    <motion.aside
-      className="sidebar"
-      initial={{ x: -100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <aside className="sidebar">
       <div className="profile-container">
         <motion.img
-          src={profileData.image}
+          src={getImagePath(profileData.image)}
           alt={`${profileData.name}'s Logo`}
           className="logo"
           whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 300 }}
         />
         <h1>{profileData.name}</h1>
         <p className="title">{profileData.title}</p>
@@ -28,13 +23,8 @@ const Sidebar = ({ activeSection, onNavClick }: SidebarProps) => {
 
       <nav>
         <ul className="nav-menu">
-          {navItems.map((item, index) => (
-            <motion.li
-              key={item.id}
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: index * 0.1 }}
-            >
+          {navItems.map((item) => (
+            <li key={item.id}>
               <a
                 href={`#${item.id}`}
                 className={activeSection === item.id ? "active" : ""}
@@ -45,7 +35,7 @@ const Sidebar = ({ activeSection, onNavClick }: SidebarProps) => {
               >
                 <i className={`fas ${item.icon}`}></i> {item.label}
               </a>
-            </motion.li>
+            </li>
           ))}
         </ul>
       </nav>
@@ -55,8 +45,7 @@ const Sidebar = ({ activeSection, onNavClick }: SidebarProps) => {
           href={profileData.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          whileHover={{ scale: 1.2, rotate: 5 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.2 }}
         >
           <i className="fab fa-linkedin"></i>
         </motion.a>
@@ -64,13 +53,12 @@ const Sidebar = ({ activeSection, onNavClick }: SidebarProps) => {
           href={profileData.social.github}
           target="_blank"
           rel="noopener noreferrer"
-          whileHover={{ scale: 1.2, rotate: -5 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.2 }}
         >
           <i className="fab fa-github"></i>
         </motion.a>
       </div>
-    </motion.aside>
+    </aside>
   );
 };
 
