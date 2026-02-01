@@ -455,6 +455,8 @@ footer {
 .rambo-page {
   min-height: 100vh;
   background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .rambo-hero {
@@ -486,6 +488,7 @@ footer {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
+  flex: 1;
 }
 
 .rambo-header {
@@ -714,7 +717,7 @@ footer {
   padding: 2rem;
   background: var(--sidebar-bg);
   color: var(--sidebar-text);
-  margin-top: 2rem;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
