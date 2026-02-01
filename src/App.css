@@ -457,6 +457,7 @@ footer {
   background: var(--bg-color);
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .rambo-hero {
