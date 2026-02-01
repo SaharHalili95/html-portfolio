@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Profile from "./components/Profile";
 import Experience from "./components/Experience";
@@ -62,12 +62,12 @@ function Portfolio() {
 
 function App() {
   return (
-    <BrowserRouter basename="/html-portfolio">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/rambo" element={<Rambo />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
