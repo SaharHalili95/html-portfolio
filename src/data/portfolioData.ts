@@ -53,6 +53,15 @@ export const skillsData = {
 
 export const projectsData = [
   {
+    title: "Budget Balance Game",
+    subtitle: "Interactive Financial Education Game",
+    description:
+      "Developed an interactive financial management game using React and TypeScript. Features 5 progression levels, 8 achievements with tracking, monthly challenges, and a comprehensive financial reporting system that acts like a personal accountant. Includes bilingual support (English/Hebrew with RTL), decision tracking, and real-time analytics with personalized recommendations. Built with modern animations and responsive design.",
+    technologies: ["React", "TypeScript", "Vite", "Local Storage"],
+    link: "https://github.com/SaharHalili95/budget-balance-game",
+    demoLink: "https://saharhalili95.github.io/budget-balance-game/",
+  },
+  {
     title: "Smart Price Comparison Platform",
     subtitle: "Full-Stack Project",
     description:
