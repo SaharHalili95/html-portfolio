@@ -80,6 +80,15 @@ export const projectsData = [
     demoLink: "https://saharhalili95.github.io/interview-prep-tracker/",
   },
   {
+    title: "CryptoPortfolio",
+    subtitle: "Crypto Investment Tracker & Dashboard",
+    description:
+      "Built a real-time cryptocurrency tracking dashboard with virtual portfolio management. Features include live prices from CoinGecko API, interactive charts, market heatmap, watchlist, and a $10K virtual trading simulator with P&L tracking. Includes dark/light mode and full responsive design.",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "CoinGecko API"],
+    link: "https://github.com/SaharHalili95/crypto-portfolio",
+    demoLink: "https://saharhalili95.github.io/crypto-portfolio/",
+  },
+  {
     title: "Rambo",
     subtitle: "Personal Project",
     description: "A mini-project showcasing my pet. Click to view details.",
