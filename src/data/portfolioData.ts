@@ -45,9 +45,9 @@ export const educationData = {
 };
 
 export const skillsData = {
-  languages: ["Python", "Java", "C++", "JavaScript"],
+  languages: ["Python", "Java", "C++", "JavaScript", "TypeScript"],
   techStack: ["React", "FastAPI", "Node.js", "SQL", "MongoDB"],
-  devTools: ["Cursor IDE", "GitHub Copilot", "Git", "VS Code"],
+  devTools: ["Cursor IDE", "Claude Code", "GitHub Copilot", "Git", "VS Code"],
   practices: ["OOP", "TDD", "Agile", "Prompt Engineering for Code"],
 };
 
