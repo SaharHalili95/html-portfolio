@@ -89,6 +89,15 @@ export const projectsData = [
     demoLink: "https://saharhalili95.github.io/crypto-portfolio/",
   },
   {
+    title: "Reaction Speed Test",
+    subtitle: "Reflex Testing Game",
+    description:
+      "Built a reaction speed testing game with 3 game modes: Reaction Time (click when screen turns green), Target Click (hit random targets), and Number Sequence (click 1-25 in order). Features performance benchmarks, stats tracking with bar charts, localStorage history, and a responsive dark theme UI.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    link: "https://github.com/SaharHalili95/reaction-speed-test",
+    demoLink: "https://saharhalili95.github.io/reaction-speed-test/",
+  },
+  {
     title: "Rambo",
     subtitle: "Personal Project",
     description: "A mini-project showcasing my pet. Click to view details.",
