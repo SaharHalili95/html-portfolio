@@ -98,6 +98,15 @@ export const projectsData = [
     demoLink: "https://saharhalili95.github.io/reaction-speed-test/",
   },
   {
+    title: "Multiplayer Tic Tac Toe",
+    subtitle: "Real-Time Multiplayer Game",
+    description:
+      "Built a real-time multiplayer Tic Tac Toe game playable from two different computers via peer-to-peer WebRTC (no backend server required). Features vs-Computer mode with Minimax AI across three difficulty levels (Easy, Medium, Unbeatable), trilingual support (Hebrew, English, Arabic) with automatic RTL/LTR switching, in-game chat between players, and persistent score tracking across rounds. Deployed as a static site on GitHub Pages.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "PeerJS", "WebRTC"],
+    link: "https://github.com/SaharHalili95/multiplayer-tictactoe",
+    demoLink: "https://saharhalili95.github.io/multiplayer-tictactoe/",
+  },
+  {
     title: "Rambo",
     subtitle: "Personal Project",
     description: "A mini-project showcasing my pet. Click to view details.",
