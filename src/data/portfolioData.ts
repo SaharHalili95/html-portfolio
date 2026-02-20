@@ -1,9 +1,9 @@
 export const profileData = {
   name: "Sahar Halili",
-  title: "Software Engineer",
+  title: "AI Engineer & Full-Stack Developer",
   image: "/images/sh-portfolio.png",
   summary:
-    "AI-Native Developer focused on modern development workflows using Cursor and GitHub Copilot to deliver high-quality code. Fast learner with a strong background in technical education and complex problem-solving.",
+    "AI Engineer specializing in RAG systems and LLM integration. Built production-ready AI applications using OpenAI, vector databases, and modern full-stack technologies. Fast learner with strong background in technical education and complex problem-solving.",
   social: {
     linkedin: "https://www.linkedin.com/in/sahar-halili-36ba38300",
     github: "https://github.com/SaharHalili95",
@@ -46,12 +46,21 @@ export const educationData = {
 
 export const skillsData = {
   languages: ["Python", "Java", "C++", "JavaScript", "TypeScript"],
-  techStack: ["React", "FastAPI", "Node.js", "SQL", "MongoDB"],
-  devTools: ["Cursor IDE", "Claude Code", "GitHub Copilot", "Git", "VS Code"],
-  practices: ["OOP", "TDD", "Agile", "Prompt Engineering for Code"],
+  techStack: ["React", "FastAPI", "Node.js", "SQL", "MongoDB", "OpenAI API", "ChromaDB"],
+  devTools: ["Cursor IDE", "Claude Code", "GitHub Copilot", "Git", "VS Code", "Railway", "Vercel"],
+  practices: ["OOP", "TDD", "Agile", "RAG Architecture", "Prompt Engineering", "Vector Embeddings"],
 };
 
 export const projectsData = [
+  {
+    title: "CodeMate AI",
+    subtitle: "RAG-Powered Code Assistant",
+    description:
+      "Built a professional AI code assistant using RAG (Retrieval Augmented Generation) architecture. Features semantic code search, AI-powered Q&A about codebases, and real-time chat with intelligent context retrieval. Implemented complete RAG pipeline: code parsing & chunking, OpenAI embeddings generation, ChromaDB vector storage, and GPT-4 integration. Modern React TypeScript frontend with syntax highlighting, file upload, and analytics dashboard. Deployed on Railway (backend) and Vercel (frontend).",
+    technologies: ["FastAPI", "OpenAI API", "ChromaDB", "RAG", "React", "TypeScript", "Tailwind CSS", "Vector Embeddings", "Railway", "Vercel"],
+    link: "https://github.com/SaharHalili95/codemate-ai",
+    demoLink: "https://codemate-ai.vercel.app",
+  },
   {
     title: "Budget Balance Game",
     subtitle: "Interactive Financial Education Game",
