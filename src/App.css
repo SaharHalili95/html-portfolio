@@ -251,6 +251,36 @@ section p {
   text-decoration: underline;
 }
 
+/* Project Highlights */
+.project-highlights {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 122, 204, 0.05) 0%, rgba(0, 90, 158, 0.08) 100%);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.project-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.4rem 0;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-highlights li i {
+  color: var(--primary-color);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.project-highlights li span {
+  line-height: 1.4;
+}
+
 .tech-tags {
   margin-top: 1rem;
   display: flex;
@@ -495,6 +525,33 @@ section p {
   z-index: 100;
 }
 
+.rambo-hero-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.lang-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .back-btn {
   display: inline-flex;
   align-items: center;
@@ -708,6 +765,76 @@ section p {
   .slide img {
     max-height: 250px;
   }
+}
+
+/* Breed Info Section */
+.breed-info {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.breed-info h2 {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.breed-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.breed-card {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+[dir="rtl"] .breed-card {
+  border-left: none;
+  border-right: 4px solid var(--primary-color);
+}
+
+.breed-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+[dir="rtl"] .breed-card:hover {
+  transform: translateX(-5px);
+}
+
+.breed-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.breed-icon {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  width: 30px;
+  text-align: center;
+}
+
+.breed-card-header h3 {
+  color: var(--secondary-color);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.breed-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 /* Rambo Quote Section */

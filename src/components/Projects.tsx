@@ -29,6 +29,22 @@ const Projects = () => {
             {project.subtitle && ` | ${project.subtitle}`}
           </h3>
           <p>{project.description}</p>
+          {project.highlights && (
+            <ul className="project-highlights">
+              {project.highlights.map((highlight, i) => (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + index * 0.15 + i * 0.1 }}
+                >
+                  <i className="fas fa-bolt"></i>
+                  <span>{highlight}</span>
+                </motion.li>
+              ))}
+            </ul>
+          )}
           {project.technologies && (
             <div className="tech-tags">
               {project.technologies.map((tech) => (

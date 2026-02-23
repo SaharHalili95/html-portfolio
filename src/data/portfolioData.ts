@@ -57,6 +57,11 @@ export const projectsData = [
     subtitle: "RAG-Powered Code Assistant",
     description:
       "Built a professional AI code assistant using RAG (Retrieval Augmented Generation) architecture. Features semantic code search, AI-powered Q&A about codebases, and real-time chat with intelligent context retrieval. Implemented complete RAG pipeline: code parsing & chunking, OpenAI embeddings generation, ChromaDB vector storage, and GPT-4 integration. Modern React TypeScript frontend with syntax highlighting, file upload, and analytics dashboard. Deployed on Railway (backend) and Vercel (frontend).",
+    highlights: [
+      "End-to-end RAG pipeline: parsing, embeddings, vector search & GPT-4",
+      "Production deployed on Railway + Vercel",
+      "Semantic search across entire codebases in seconds",
+    ],
     technologies: ["FastAPI", "OpenAI API", "ChromaDB", "RAG", "React", "TypeScript", "Tailwind CSS", "Vector Embeddings", "Railway", "Vercel"],
     link: "https://github.com/SaharHalili95/codemate-ai",
     demoLink: "https://codemate-ai.vercel.app",
@@ -66,6 +71,11 @@ export const projectsData = [
     subtitle: "Interactive Financial Education Game",
     description:
       "Developed an interactive financial management game using React and TypeScript. Features 5 progression levels, 8 achievements with tracking, monthly challenges, and a comprehensive financial reporting system that acts like a personal accountant. Includes bilingual support (English/Hebrew with RTL), decision tracking, and real-time analytics with personalized recommendations. Built with modern animations and responsive design.",
+    highlights: [
+      "5 progression levels with 8 unlockable achievements",
+      "Bilingual (English/Hebrew) with full RTL support",
+      "Real-time financial analytics & personalized recommendations",
+    ],
     technologies: ["React", "TypeScript", "Vite", "Local Storage"],
     link: "https://github.com/SaharHalili95/budget-balance-game",
     demoLink: "https://saharhalili95.github.io/budget-balance-game/",
@@ -75,6 +85,11 @@ export const projectsData = [
     subtitle: "Full-Stack Project",
     description:
       "Developed a full-stack price comparison web app using FastAPI (Python) and React TypeScript. Leveraged Cursor AI to accelerate development, specifically for complex data validation and Pydantic model structuring. Built automated product search and price tracking features across multiple stores with a focus on type safety and responsive design.",
+    highlights: [
+      "Automated multi-store price tracking & comparison",
+      "AI-accelerated development workflow with Cursor",
+      "End-to-end type safety with Pydantic + TypeScript",
+    ],
     technologies: ["FastAPI", "React", "TypeScript", "Python", "Pydantic"],
     link: "https://github.com/SaharHalili95/price-comparison-platform",
     demoLink: "https://saharhalili95.github.io/price-comparison-platform/",
@@ -84,6 +99,11 @@ export const projectsData = [
     subtitle: "Full-Stack Project",
     description:
       "Built a full-stack application for tracking interview preparation progress. Features include question management, progress tracking, and categorization. Built with FastAPI backend and MongoDB for data persistence.",
+    highlights: [
+      "Full CRUD with MongoDB persistence",
+      "Category-based question management & filtering",
+      "Progress tracking across interview topics",
+    ],
     technologies: ["FastAPI", "MongoDB", "React", "TypeScript"],
     link: "https://github.com/SaharHalili95/interview-prep-tracker",
     demoLink: "https://saharhalili95.github.io/interview-prep-tracker/",
@@ -93,6 +113,11 @@ export const projectsData = [
     subtitle: "Crypto Investment Tracker & Dashboard",
     description:
       "Built a real-time cryptocurrency tracking dashboard with virtual portfolio management. Features include live prices from CoinGecko API, interactive charts, market heatmap, watchlist, and a $10K virtual trading simulator with P&L tracking. Includes dark/light mode and full responsive design.",
+    highlights: [
+      "Live market data from CoinGecko API",
+      "$10K virtual trading simulator with P&L tracking",
+      "Interactive charts, market heatmap & watchlist",
+    ],
     technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "CoinGecko API"],
     link: "https://github.com/SaharHalili95/crypto-portfolio",
     demoLink: "https://saharhalili95.github.io/crypto-portfolio/",
@@ -102,6 +127,11 @@ export const projectsData = [
     subtitle: "Reflex Testing Game",
     description:
       "Built a reaction speed testing game with 3 game modes: Reaction Time (click when screen turns green), Target Click (hit random targets), and Number Sequence (click 1-25 in order). Features performance benchmarks, stats tracking with bar charts, localStorage history, and a responsive dark theme UI.",
+    highlights: [
+      "3 game modes for comprehensive reflex testing",
+      "Performance benchmarks with historical stats tracking",
+      "Visual analytics with bar charts & score history",
+    ],
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     link: "https://github.com/SaharHalili95/reaction-speed-test",
     demoLink: "https://saharhalili95.github.io/reaction-speed-test/",
@@ -111,6 +141,11 @@ export const projectsData = [
     subtitle: "Real-Time Multiplayer Game",
     description:
       "Built a real-time multiplayer Tic Tac Toe game playable from two different computers via peer-to-peer WebRTC (no backend server required). Features vs-Computer mode with Minimax AI across three difficulty levels (Easy, Medium, Unbeatable), trilingual support (Hebrew, English, Arabic) with automatic RTL/LTR switching, in-game chat between players, and persistent score tracking across rounds. Deployed as a static site on GitHub Pages.",
+    highlights: [
+      "Peer-to-peer WebRTC multiplayer — zero backend required",
+      "Minimax AI with 3 difficulty levels (Easy to Unbeatable)",
+      "Trilingual support (Hebrew, English, Arabic) with auto RTL/LTR",
+    ],
     technologies: ["HTML5", "CSS3", "JavaScript", "PeerJS", "WebRTC"],
     link: "https://github.com/SaharHalili95/multiplayer-tictactoe",
     demoLink: "https://saharhalili95.github.io/multiplayer-tictactoe/",
