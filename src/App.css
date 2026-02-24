@@ -880,3 +880,249 @@ section p {
     font-size: 1.1rem;
   }
 }
+
+/* ==========================================
+   Products Link Button in Rambo Hero
+   ========================================== */
+.products-link-btn {
+  color: #ff9900;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #ff9900;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.products-link-btn:hover {
+  background: #ff9900;
+  color: #1a1a2e;
+}
+
+/* ==========================================
+   Pitbull Products Page Styles
+   ========================================== */
+.pitbull-products-page {
+  min-height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.products-header h1 {
+  font-size: 2.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.products-subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* Category Filter Buttons */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.category-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background: var(--bg-color);
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.category-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.category-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Product Card */
+.product-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-icon-area {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  padding: 2rem;
+  text-align: center;
+}
+
+.product-icon-area i {
+  font-size: 3rem;
+  color: white;
+}
+
+.product-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-info h3 {
+  font-size: 1.05rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.product-desc {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  flex: 1;
+}
+
+.product-rating {
+  margin-bottom: 0.6rem;
+}
+
+.star-filled {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  margin-inline-end: 2px;
+}
+
+.star-empty {
+  color: #d1d5db;
+  font-size: 0.85rem;
+  margin-inline-end: 2px;
+}
+
+.product-price {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.price-label {
+  color: var(--text-light);
+}
+
+.price-value {
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+/* Buy Button - Amazon Orange */
+.buy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  background: #ff9900;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.buy-btn:hover {
+  background: #e68a00;
+  transform: scale(1.03);
+}
+
+.buy-btn i {
+  font-size: 1.1rem;
+}
+
+/* RTL adjustments */
+[dir="rtl"] .product-card {
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .products-container {
+    padding: 1rem;
+  }
+
+  .products-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .category-filters {
+    gap: 0.4rem;
+    padding: 0.8rem;
+  }
+
+  .category-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-icon-area {
+    padding: 1.5rem;
+  }
+
+  .product-icon-area i {
+    font-size: 2.5rem;
+  }
+}

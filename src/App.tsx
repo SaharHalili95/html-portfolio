@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Rambo from "./components/Rambo";
+import PitbullProducts from "./components/PitbullProducts";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./App.css";
 
@@ -66,6 +67,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/rambo" element={<Rambo />} />
+        <Route path="/pitbull-products" element={<PitbullProducts />} />
       </Routes>
     </HashRouter>
   );

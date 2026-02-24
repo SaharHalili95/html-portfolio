@@ -264,6 +264,10 @@ const Rambo = () => {
           <Link to="/" className="back-btn">
             <i className={`fas fa-arrow-${isRtl ? "right" : "left"}`}></i> {t.backBtn}
           </Link>
+          <Link to="/pitbull-products" className="products-link-btn">
+            <i className="fas fa-shopping-cart"></i>{" "}
+            {lang === "he" ? "מוצרים מומלצים" : "Recommended Products"}
+          </Link>
           <button
             className="lang-toggle-btn"
             onClick={() => setLang(lang === "he" ? "en" : "he")}
