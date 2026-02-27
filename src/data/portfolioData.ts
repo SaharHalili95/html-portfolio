@@ -111,13 +111,13 @@ export const projectsData = [
     title: "Interview Prep Tracker",
     subtitle: "Full-Stack Project",
     description:
-      "Built a full-stack application for tracking interview preparation progress. Features include question management, progress tracking, and categorization. Built with FastAPI backend and MongoDB for data persistence.",
+      "Built a coding interview preparation tracker with question management, progress tracking, and LeetCode integration. Deployed as a static app on GitHub Pages using localStorage for offline-first usage — no backend required. Features CRUD operations, difficulty filtering, category organization, and sample questions on first load.",
     highlights: [
-      "Full CRUD with MongoDB persistence",
-      "Category-based question management & filtering",
-      "Progress tracking across interview topics",
+      "Static GitHub Pages deployment — zero backend required",
+      "LeetCode integration with direct problem links",
+      "Smart filtering by difficulty, category & status",
     ],
-    technologies: ["FastAPI", "MongoDB", "React", "TypeScript"],
+    technologies: ["FastAPI", "React", "TypeScript", "MongoDB", "localStorage", "Docker"],
     link: "https://github.com/SaharHalili95/interview-prep-tracker",
     demoLink: "https://saharhalili95.github.io/interview-prep-tracker/",
   },
