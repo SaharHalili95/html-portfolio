@@ -64,6 +64,7 @@ export const projectsData = [
     ],
     technologies: ["FastAPI", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "WebSocket", "Tailwind CSS", "SQLAlchemy", "Recharts"],
     link: "https://github.com/SaharHalili95/netsentinel",
+    demoLink: "https://saharhalili95.github.io/netsentinel/",
   },
   {
     title: "CodeMate AI",
