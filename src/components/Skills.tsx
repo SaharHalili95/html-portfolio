@@ -40,8 +40,9 @@ const Skills = () => {
       <ul className="skills-list">
         <SkillCategory title="Languages" skills={skillsData.languages} delay={0.2} />
         <SkillCategory title="Tech Stack" skills={skillsData.techStack} delay={0.3} />
-        <SkillCategory title="Dev Tools" skills={skillsData.devTools} delay={0.4} />
-        <SkillCategory title="Practices" skills={skillsData.practices} delay={0.5} />
+        <SkillCategory title="AI Tools" skills={skillsData.aiTools} delay={0.4} />
+        <SkillCategory title="Dev Tools" skills={skillsData.devTools} delay={0.5} />
+        <SkillCategory title="Practices" skills={skillsData.practices} delay={0.6} />
       </ul>
     </Section>
   );

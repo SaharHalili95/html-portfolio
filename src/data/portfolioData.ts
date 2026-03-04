@@ -3,7 +3,7 @@ export const profileData = {
   title: "AI Engineer & Full-Stack Developer",
   image: "/images/sh-portfolio.png",
   summary:
-    "AI Engineer specializing in RAG systems and LLM integration. Built production-ready AI applications using OpenAI, vector databases, and modern full-stack technologies. Fast learner with strong background in technical education and complex problem-solving.",
+    "AI Engineer specializing in RAG systems and LLM integration. Built production-ready AI applications using OpenAI, vector databases, and modern full-stack technologies. Proficient in AI-assisted development workflows with Claude Code and Cursor IDE. Fast learner with strong background in technical education and complex problem-solving.",
   social: {
     linkedin: "https://www.linkedin.com/in/sahar-halili-36ba38300",
     github: "https://github.com/SaharHalili95",
@@ -47,8 +47,9 @@ export const educationData = {
 export const skillsData = {
   languages: ["Python", "Java", "C++", "JavaScript", "TypeScript"],
   techStack: ["React", "Next.js", "FastAPI", "Node.js", "SQL", "PostgreSQL", "Redis", "MongoDB", "Docker", "OpenAI API", "ChromaDB"],
-  devTools: ["Cursor IDE", "Claude Code", "GitHub Copilot", "Git", "VS Code", "Railway", "Vercel"],
-  practices: ["OOP", "TDD", "Agile", "RAG Architecture", "Network Security", "Prompt Engineering", "Vector Embeddings"],
+  aiTools: ["Claude Code", "Cursor IDE", "GitHub Copilot", "Prompt Engineering"],
+  devTools: ["Git", "VS Code", "Railway", "Vercel", "Docker"],
+  practices: ["OOP", "TDD", "Agile", "RAG Architecture", "Network Security", "Vector Embeddings"],
 };
 
 export const projectsData = [
