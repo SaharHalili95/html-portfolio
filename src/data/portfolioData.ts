@@ -3,7 +3,7 @@ export const profileData = {
   title: "AI Engineer & Full-Stack Developer",
   image: "/images/sh-portfolio.png",
   summary:
-    "AI Engineer specializing in RAG systems and LLM integration. Built production-ready AI applications using OpenAI, vector databases, and modern full-stack technologies. Proficient in AI-assisted development workflows with Claude Code and Cursor IDE. Fast learner with strong background in technical education and complex problem-solving.",
+    "I help security teams build and ship production-grade systems faster — combining hands-on experience in network security monitoring, intrusion detection, and SOC-level threat analysis with full-stack AI development. Familiar with security compliance standards (SOC 2, security best practices) and operational security from IDF service. I leverage AI-assisted workflows (Claude Code, Cursor) to accelerate delivery without compromising quality or security posture.",
   social: {
     linkedin: "https://www.linkedin.com/in/sahar-halili-36ba38300",
     github: "https://github.com/SaharHalili95",
