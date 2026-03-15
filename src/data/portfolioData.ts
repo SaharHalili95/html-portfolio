@@ -3,7 +3,7 @@ export const profileData = {
   title: "AI Engineer & Full-Stack Developer",
   image: "/images/sh-portfolio.png",
   summary:
-    "I help security teams build and ship production-grade systems faster — combining hands-on experience in network security monitoring, intrusion detection, and SOC-level threat analysis with full-stack AI development. Familiar with security compliance standards (SOC 2, security best practices) and operational security from IDF service. I leverage AI-assisted workflows (Claude Code, Cursor) to accelerate delivery without compromising quality or security posture.",
+    "Security-focused AI & Full-Stack Engineer who ships production-ready systems fast. Hands-on with network security monitoring, SOC 2 compliance, and AI-assisted development (Claude Code, Cursor).",
   social: {
     linkedin: "https://www.linkedin.com/in/sahar-halili-36ba38300",
     github: "https://github.com/SaharHalili95",
