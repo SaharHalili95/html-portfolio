@@ -3,7 +3,7 @@ export const profileData = {
   title: "AI Engineer & Full-Stack Developer",
   image: "/images/sh-portfolio.png",
   summary:
-    "Security-focused AI & Full-Stack Engineer who ships production-ready systems fast. Hands-on with network security monitoring, SOC 2 compliance, and AI-assisted development (Claude Code, Cursor).",
+    "Building secure, production-ready systems from the ground up — network monitoring, SOC 2 compliance, and AI-powered applications. Security-first mindset with full-stack delivery speed.",
   social: {
     linkedin: "https://www.linkedin.com/in/sahar-halili-36ba38300",
     github: "https://github.com/SaharHalili95",
@@ -66,6 +66,20 @@ export const projectsData = [
     technologies: ["FastAPI", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "WebSocket", "Tailwind CSS", "SQLAlchemy", "Recharts"],
     link: "https://github.com/SaharHalili95/netsentinel",
     demoLink: "https://saharhalili95.github.io/netsentinel/",
+  },
+  {
+    title: "CodeMate AI",
+    subtitle: "RAG-Powered Code Assistant",
+    description:
+      "Built a professional AI code assistant using RAG (Retrieval Augmented Generation) architecture. Features semantic code search, AI-powered Q&A about codebases, and real-time chat with intelligent context retrieval. Implemented complete RAG pipeline: code parsing & chunking, OpenAI embeddings generation, ChromaDB vector storage, and GPT-4 integration. Modern React TypeScript frontend with syntax highlighting, file upload, and analytics dashboard. Deployed on Railway (backend) and Vercel (frontend).",
+    highlights: [
+      "End-to-end RAG pipeline: parsing, embeddings, vector search & GPT-4",
+      "Production deployed on Railway + Vercel",
+      "Semantic search across entire codebases in seconds",
+    ],
+    technologies: ["FastAPI", "OpenAI API", "ChromaDB", "RAG", "React", "TypeScript", "Tailwind CSS", "Vector Embeddings", "Railway", "Vercel"],
+    link: "https://github.com/SaharHalili95/codemate-ai",
+    demoLink: "https://codemate-ai.vercel.app",
   },
   {
     title: "Budget Balance Game",
