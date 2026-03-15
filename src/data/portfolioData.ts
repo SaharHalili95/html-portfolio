@@ -57,11 +57,11 @@ export const projectsData = [
     title: "NetSentinel",
     subtitle: "Network Security Monitoring Platform",
     description:
-      "Built a full-stack network monitoring and intrusion detection platform for real-time security oversight. Features automated device discovery via ARP/nmap scanning, port scanning with vulnerability detection, traffic analysis with GeoIP mapping, anomaly detection engine, and real-time WebSocket alerts. Dark-themed dashboard with interactive charts, network topology visualization, and comprehensive alert management. Dockerized with PostgreSQL and Redis for production deployment.",
+      "A production-grade platform giving security teams real-time visibility across their network — automated device discovery, vulnerability detection, anomaly analysis, and live WebSocket alerts. Containerized and SOC-ready, built to catch threats before they become incidents.",
     highlights: [
-      "Real-time device discovery, port scanning & anomaly detection",
-      "WebSocket live alerts with severity-based classification",
-      "Full-stack: FastAPI + Next.js + PostgreSQL + Redis + Docker",
+      "Detects intrusions and anomalies in real-time across the entire network",
+      "SOC-ready: severity-based alerts, audit trail & network topology view",
+      "Production-grade: FastAPI + Next.js + PostgreSQL + Redis + Docker",
     ],
     technologies: ["FastAPI", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "WebSocket", "Tailwind CSS", "SQLAlchemy", "Recharts"],
     link: "https://github.com/SaharHalili95/netsentinel",
