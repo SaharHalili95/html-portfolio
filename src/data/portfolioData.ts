@@ -113,9 +113,9 @@ export const projectsData = [
     title: "Interview Prep Tracker",
     subtitle: "Full-Stack Project",
     description:
-      "Built a coding interview preparation tracker with question management, progress tracking, and LeetCode integration. Deployed as a static app on GitHub Pages using localStorage for offline-first usage — no backend required. Features CRUD operations, difficulty filtering, category organization, and sample questions on first load.",
+      "Built a coding interview preparation tracker with question management, progress tracking, and LeetCode integration. Deployed as a static app on GitHub Pages using localStorage for offline-first usage - no backend required. Features CRUD operations, difficulty filtering, category organization, and sample questions on first load.",
     highlights: [
-      "Static GitHub Pages deployment — zero backend required",
+      "Static GitHub Pages deployment - zero backend required",
       "LeetCode integration with direct problem links",
       "Smart filtering by difficulty, category & status",
     ],
@@ -157,7 +157,7 @@ export const projectsData = [
     description:
       "Built a real-time multiplayer Tic Tac Toe game playable from two different computers via peer-to-peer WebRTC (no backend server required). Features vs-Computer mode with Minimax AI across three difficulty levels (Easy, Medium, Unbeatable), trilingual support (Hebrew, English, Arabic) with automatic RTL/LTR switching, in-game chat between players, and persistent score tracking across rounds. Deployed as a static site on GitHub Pages.",
     highlights: [
-      "Peer-to-peer WebRTC multiplayer — zero backend required",
+      "Peer-to-peer WebRTC multiplayer - zero backend required",
       "Minimax AI with 3 difficulty levels (Easy to Unbeatable)",
       "Trilingual support (Hebrew, English, Arabic) with auto RTL/LTR",
     ],
