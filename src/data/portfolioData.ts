@@ -3,7 +3,7 @@ export const profileData = {
   title: "AI Engineer & Full-Stack Developer",
   image: "/images/sh-portfolio.png",
   summary:
-    "Building secure, production-ready systems from the ground up — network monitoring, SOC 2 compliance, and AI-powered applications. Security-first mindset with full-stack delivery speed.",
+    "Building secure, production-ready systems from the ground up - network monitoring, SOC 2 compliance, and AI-powered applications. Security-first mindset with full-stack delivery speed.",
   social: {
     linkedin: "https://www.linkedin.com/in/sahar-halili-36ba38300",
     github: "https://github.com/SaharHalili95",
@@ -57,7 +57,7 @@ export const projectsData = [
     title: "NetSentinel",
     subtitle: "Network Security Monitoring Platform",
     description:
-      "A production-grade platform giving security teams real-time visibility across their network — automated device discovery, vulnerability detection, anomaly analysis, and live WebSocket alerts. Containerized and SOC-ready, built to catch threats before they become incidents.",
+      "A production-grade platform giving security teams real-time visibility across their network - automated device discovery, vulnerability detection, anomaly analysis, and live WebSocket alerts. Containerized and SOC-ready, built to catch threats before they become incidents.",
     highlights: [
       "Detects intrusions and anomalies in real-time across the entire network",
       "SOC-ready: severity-based alerts, audit trail & network topology view",
