@@ -79,7 +79,7 @@ export const projectsData = [
     ],
     technologies: ["FastAPI", "OpenAI API", "ChromaDB", "RAG", "React", "TypeScript", "Tailwind CSS", "Vector Embeddings", "Railway", "Vercel"],
     link: "https://github.com/SaharHalili95/codemate-ai",
-    demoLink: "https://codemate-ai.vercel.app",
+    demoLink: "https://saharhalili95.github.io/codemate-ai/",
   },
   {
     title: "Budget Balance Game",
