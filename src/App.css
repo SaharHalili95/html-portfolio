@@ -722,6 +722,40 @@ section p {
 
 .article-toggle-btn:hover { opacity: 0.75; }
 
+.article-sources {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed #ddd;
+}
+
+.sources-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 0.2rem;
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 3px 0;
+  transition: var(--transition);
+}
+
+.source-link:hover { text-decoration: underline; }
+
+.source-link .fa-external-link-alt { font-size: 0.7rem; opacity: 0.6; }
+
 /* Stats tab */
 .stats-header {
   text-align: center;

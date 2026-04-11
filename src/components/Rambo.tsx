@@ -52,6 +52,10 @@ const articles = {
 תוצאות 2024: פיטבול אמריקאי - 87.4%. גולדן רטריבר - 85.6%. רועה גרמני - 85.3%.
 
 המסקנה של ATTS: אין קשר מובהק בין גזע לבין נטייה לאגרסיביות כלפי בני אדם. הגורמים המשמעותיים הם חינוך, סוציאליזציה וטיפול.`,
+      sources: [
+        { label: "ATTS - סטטיסטיקות גזע רשמיות", url: "https://atts.org/breed-statistics/" },
+        { label: "ATTS - אודות הבדיקה", url: "https://atts.org/about-atts/" },
+      ],
     },
     {
       icon: "fa-history",
@@ -65,6 +69,10 @@ const articles = {
 לוגו RCA Victor עם 'His Master's Voice' - הכלב ניפר שבתמונה האיקונית היה ככל הנראה פיטבול.
 
 שינוי התדמית החל רק בשנות ה-80 בגלל כתבות מדיה סנסציוניות - לא בגלל שינוי בהתנהגות הגזע.`,
+      sources: [
+        { label: "Smithsonian - Sergeant Stubby: כלב המלחמה המקורי", url: "https://www.smithsonianmag.com/history/sergeant-stubby-original-war-dog-180960576/" },
+        { label: "Wikipedia - Sergeant Stubby", url: "https://en.wikipedia.org/wiki/Sergeant_Stubby" },
+      ],
     },
     {
       icon: "fa-dna",
@@ -78,6 +86,11 @@ AVMA (איגוד הווטרינרים האמריקאי): "חקיקה הממוק�
 מחקר של האוניברסיטה של Bristol (2019): 80% מהנשיכות הן תוצאה של חוסר סוציאליזציה, התעללות או הזנחה - ללא קשר לגזע.
 
 המסקנה: כלב מסוכן נוצר על ידי בני אדם, לא על ידי גנטיקה.`,
+      sources: [
+        { label: "AVMA - כלבים מסוכנים ו-BSL", url: "https://www.avma.org/resources/animal-health-welfare/dangerous-dogs" },
+        { label: "CDC - מניעת נשיכות כלבים", url: "https://www.cdc.gov/niosh/topics/emres/dog.html" },
+        { label: "Frontiers in Veterinary Science (2019) - גורמי נשיכה", url: "https://www.frontiersin.org/articles/10.3389/fvets.2019.00235/full" },
+      ],
     },
     {
       icon: "fa-heart",
@@ -89,6 +102,11 @@ AVMA (איגוד הווטרינרים האמריקאי): "חקיקה הממוק�
 Dakota: פיטבול שניצל ממקלט ב-2015, מבקר היום ב-200+ בתי חולים ובתי ספר בשנה כחלק מתוכנית טיפול בבעלי חיים.
 
 בישראל: עמותת 'כלב לחיים' ועמותת 'אהבה בין גזעים' מאמנות פיטבולים שניצלו להיות כלבי שירות לנכים ולניצולי טראומה.`,
+      sources: [
+        { label: "BAD RAP - סיפור כלבי Vick", url: "https://badrap.org/vicktory-dogs" },
+        { label: "Best Friends - כלבי Vick היום", url: "https://bestfriends.org/sanctuary/vick-dogs" },
+        { label: "ASPCA - טיפול בבעלי חיים", url: "https://www.aspca.org/animal-homelessness/shelter-intake-and-surrender/pit-bulls" },
+      ],
     },
     {
       icon: "fa-gavel",
@@ -100,6 +118,11 @@ Dakota: פיטבול שניצל ממקלט ב-2015, מבקר היום ב-200+ ב
 קלגרי, קנדה: במקום לאסור גזעים, העיר השיקה תוכנית 'Responsible Pet Ownership'. ב-20 שנה ירדו תאונות הנשיכה ב-70%.
 
 עמדת ה-ASPCA, AVMA ו-CDC: כולם מתנגדים לחקיקה ספציפית לגזע ומעדיפים מדיניות המתמקדת בהתנהגות הכלב והאחריות של הבעלים.`,
+      sources: [
+        { label: "ASPCA - עמדה על חקיקה ספציפית לגזע", url: "https://www.aspca.org/animal-protection/public-policy/breed-specific-legislation" },
+        { label: "AVMA - BSL ומדיניות חלופית", url: "https://www.avma.org/resources/animal-health-welfare/dangerous-dogs" },
+        { label: "Journal of Vet Behavior - יעילות BSL", url: "https://www.sciencedirect.com/science/article/pii/S1558787813001482" },
+      ],
     },
   ],
   en: [
@@ -113,6 +136,10 @@ Dakota: פיטבול שניצל ממקלט ב-2015, מבקר היום ב-200+ ב
 2024 results: American Pit Bull Terrier - 87.4%. Golden Retriever - 85.6%. German Shepherd - 85.3%.
 
 ATTS conclusion: There is no significant correlation between breed and tendency toward human-directed aggression. The key factors are upbringing, socialization, and care.`,
+      sources: [
+        { label: "ATTS - Official Breed Statistics", url: "https://atts.org/breed-statistics/" },
+        { label: "ATTS - About the Test", url: "https://atts.org/about-atts/" },
+      ],
     },
     {
       icon: "fa-history",
@@ -126,6 +153,10 @@ American symbol: Sergeant Stubby, a Pit Bull, was the most decorated war dog of 
 The RCA Victor logo with 'His Master's Voice' - the iconic dog Nipper was most likely a Pit Bull.
 
 The image change began only in the 1980s due to sensationalist media coverage - not because of any change in the breed's behavior.`,
+      sources: [
+        { label: "Smithsonian - Sergeant Stubby: The Original War Dog", url: "https://www.smithsonianmag.com/history/sergeant-stubby-original-war-dog-180960576/" },
+        { label: "Wikipedia - Sergeant Stubby", url: "https://en.wikipedia.org/wiki/Sergeant_Stubby" },
+      ],
     },
     {
       icon: "fa-dna",
@@ -139,6 +170,11 @@ AVMA (American Veterinary Medical Association): "Breed-specific legislation is n
 University of Bristol study (2019): 80% of bites result from lack of socialization, abuse, or neglect - regardless of breed.
 
 Conclusion: A dangerous dog is created by humans, not genetics.`,
+      sources: [
+        { label: "AVMA - Dangerous Dogs & BSL", url: "https://www.avma.org/resources/animal-health-welfare/dangerous-dogs" },
+        { label: "CDC - Dog Bite Prevention", url: "https://www.cdc.gov/niosh/topics/emres/dog.html" },
+        { label: "Frontiers in Veterinary Science (2019) - Bite Risk Factors", url: "https://www.frontiersin.org/articles/10.3389/fvets.2019.00235/full" },
+      ],
     },
     {
       icon: "fa-heart",
@@ -150,6 +186,11 @@ Conclusion: A dangerous dog is created by humans, not genetics.`,
 Dakota: A Pit Bull rescued from a shelter in 2015, now visits 200+ hospitals and schools per year as part of an animal-assisted therapy program.
 
 In Israel: Organizations like 'Kelev L'Chaim' and 'Ahava Bein Geza'im' train rescued Pit Bulls to become service dogs for people with disabilities and trauma survivors.`,
+      sources: [
+        { label: "BAD RAP - The Vicktory Dogs Story", url: "https://badrap.org/vicktory-dogs" },
+        { label: "Best Friends - Vick Dogs Today", url: "https://bestfriends.org/sanctuary/vick-dogs" },
+        { label: "ASPCA - Pit Bull Info", url: "https://www.aspca.org/animal-homelessness/shelter-intake-and-surrender/pit-bulls" },
+      ],
     },
     {
       icon: "fa-gavel",
@@ -161,6 +202,11 @@ In Israel: Organizations like 'Kelev L'Chaim' and 'Ahava Bein Geza'im' train res
 Calgary, Canada: Instead of banning breeds, the city launched a 'Responsible Pet Ownership' program. Over 20 years, bite incidents dropped by 70%.
 
 ASPCA, AVMA, and CDC positions: All oppose breed-specific legislation and advocate for policies focused on dog behavior and owner responsibility.`,
+      sources: [
+        { label: "ASPCA - Position on Breed-Specific Legislation", url: "https://www.aspca.org/animal-protection/public-policy/breed-specific-legislation" },
+        { label: "AVMA - BSL & Alternative Policies", url: "https://www.avma.org/resources/animal-health-welfare/dangerous-dogs" },
+        { label: "Journal of Vet Behavior - BSL Effectiveness", url: "https://www.sciencedirect.com/science/article/pii/S1558787813001482" },
+      ],
     },
   ],
 };
@@ -474,6 +520,16 @@ export default function Rambo() {
                       {article.content.split("\n\n").map((para, j) => (
                         <p key={j}>{para}</p>
                       ))}
+                      {article.sources.length > 0 && (
+                        <div className="article-sources">
+                          <span className="sources-label"><i className="fas fa-link"></i> {isRtl ? "מקורות:" : "Sources:"}</span>
+                          {article.sources.map((src, k) => (
+                            <a key={k} href={src.url} target="_blank" rel="noopener noreferrer" className="source-link">
+                              {src.label} <i className="fas fa-external-link-alt"></i>
+                            </a>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )}
                   <button
@@ -497,17 +553,17 @@ export default function Rambo() {
               <p>{tr.statsSubtitle}</p>
             </div>
             <div className="chart-wrapper">
-              <ResponsiveContainer width="100%" height={380}>
+              <ResponsiveContainer width="100%" height={400}>
                 <BarChart
                   data={chartData}
                   layout="vertical"
-                  margin={{ top: 10, right: 50, left: isRtl ? 10 : 0, bottom: 10 }}
+                  margin={{ top: 30, right: 60, left: 10, bottom: 10 }}
                 >
                   <CartesianGrid strokeDasharray="3 3" horizontal={false} />
                   <XAxis type="number" domain={[60, 95]} tickFormatter={(v) => `${v}%`} tick={{ fontSize: 12 }} />
-                  <YAxis type="category" dataKey="name" width={isRtl ? 100 : 130} tick={{ fontSize: 13 }} />
+                  <YAxis type="category" dataKey="name" width={150} tick={{ fontSize: 13 }} />
                   <Tooltip formatter={(v) => [`${v}%`, isRtl ? "ציון" : "Score"]} />
-                  <ReferenceLine x={87.4} stroke="#007acc" strokeDasharray="4 4" label={{ value: "Pit Bull 87.4%", position: "top", fontSize: 11, fill: "#007acc" }} />
+                  <ReferenceLine x={87.4} stroke="#007acc" strokeDasharray="4 4" label={{ value: isRtl ? "פיטבול 87.4%" : "Pit Bull 87.4%", position: "insideTopRight", fontSize: 11, fill: "#007acc" }} />
                   <Bar dataKey="score" radius={[0, 6, 6, 0]}>
                     {chartData.map((entry, i) => (
                       <Cell key={i} fill={entry.highlight ? "#007acc" : "#94a3b8"} />
