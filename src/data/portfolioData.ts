@@ -193,6 +193,13 @@ export const projectsData = [
     link: "https://github.com/SaharHalili95/multiplayer-tictactoe",
     demoLink: "https://saharhalili95.github.io/multiplayer-tictactoe/",
   },
+  {
+    title: "Rambo",
+    subtitle: "Personal Project",
+    description: "A mini-project showcasing my pet. Click to view details.",
+    isInternal: true,
+    internalLink: "/rambo",
+  },
 ];
 
 export const contactData = {
