@@ -195,8 +195,15 @@ export const projectsData = [
   },
   {
     title: "Rambo",
-    subtitle: "Personal Project",
-    description: "A mini-project showcasing my pet. Click to view details.",
+    subtitle: "Pit Bull Breed Advocacy Site",
+    description:
+      "A bilingual (Hebrew/English) educational site built to change the public perception of Pit Bulls. Features a personal photo gallery of Rambo, breed facts backed by research, myth-busting content, and stories about Pit Bulls serving as therapy and rescue dogs. Built with full RTL support and auto-advancing slideshow.",
+    highlights: [
+      "Bilingual Hebrew/English with automatic RTL/LTR switching",
+      "Myth-busting section backed by temperament research data",
+      "Covers therapy dogs, rescue work, and family-friendly traits",
+    ],
+    technologies: ["React", "TypeScript", "Vite"],
     isInternal: true,
     internalLink: "/rambo",
   },
