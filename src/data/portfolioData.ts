@@ -62,8 +62,9 @@ export const projectsData = [
       "Detects intrusions and anomalies in real-time across the entire network",
       "SOC-ready: severity-based alerts, audit trail & network topology view",
       "Production-grade: FastAPI + Next.js + PostgreSQL + Redis + Docker",
+      "Full unit test coverage for anomaly detection and alert management",
     ],
-    technologies: ["FastAPI", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "WebSocket", "Tailwind CSS", "SQLAlchemy", "Recharts"],
+    technologies: ["FastAPI", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "WebSocket", "Tailwind CSS", "SQLAlchemy", "Recharts", "pytest"],
     link: "https://github.com/SaharHalili95/netsentinel",
     demoLink: "https://saharhalili95.github.io/netsentinel/",
   },
@@ -80,6 +81,47 @@ export const projectsData = [
     technologies: ["FastAPI", "OpenAI API", "ChromaDB", "RAG", "React", "TypeScript", "Tailwind CSS", "Vector Embeddings", "Railway", "Vercel"],
     link: "https://github.com/SaharHalili95/codemate-ai",
     demoLink: "https://saharhalili95.github.io/codemate-ai/",
+  },
+  {
+    title: "NitaiBot",
+    subtitle: "AI-Powered Telegram Content Bot",
+    description:
+      "A Telegram bot that generates professional Hebrew product pages for eCommerce using the Claude API (Anthropic). Given a product name or SKU, the bot produces structured marketing content including specs, highlights, and SEO-ready HTML - styled to the standards of leading Israeli retail chains. Built with Python, Flask, and the Anthropic SDK.",
+    highlights: [
+      "Generates full product pages in Hebrew using Claude (Anthropic API)",
+      "Outputs SEO-ready HTML formatted for WordPress embedding",
+      "Deployed on a live server with Gunicorn + Flask",
+    ],
+    technologies: ["Python", "Claude API", "Anthropic SDK", "Telegram Bot API", "Flask", "Gunicorn"],
+    link: "https://github.com/SaharHalili95/nitai-bot",
+  },
+  {
+    title: "Vet-Book",
+    subtitle: "Veterinary Management System",
+    description:
+      "A full-stack veterinary clinic management app with appointment booking, medical records, weight tracking per pet, and automated email/SMS reminders for upcoming appointments. Features user authentication, a background reminder scheduler, and a Streamlit dashboard for clinic staff.",
+    highlights: [
+      "Automated email and SMS reminders via background scheduler",
+      "Medical records and weight history tracking per pet",
+      "Full user authentication with session management",
+    ],
+    technologies: ["FastAPI", "Python", "Streamlit", "Pydantic", "Docker"],
+    link: "https://github.com/SaharHalili95/Vet-Book",
+  },
+  {
+    title: "CryptoPortfolio",
+    subtitle: "Crypto Investment Tracker & Dashboard",
+    description:
+      "Built a real-time cryptocurrency tracking dashboard with virtual portfolio management. Features live prices from CoinGecko API, interactive charts, market heatmap, watchlist, price alert system with browser notifications, and a $10K virtual trading simulator with P&L tracking. Includes dark/light mode and full responsive design.",
+    highlights: [
+      "Live market data from CoinGecko API",
+      "$10K virtual trading simulator with P&L tracking",
+      "Price alerts with browser notifications",
+      "Interactive charts, market heatmap & watchlist",
+    ],
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "CoinGecko API"],
+    link: "https://github.com/SaharHalili95/crypto-portfolio",
+    demoLink: "https://saharhalili95.github.io/crypto-portfolio/",
   },
   {
     title: "Budget Balance Game",
@@ -124,20 +166,6 @@ export const projectsData = [
     demoLink: "https://saharhalili95.github.io/interview-prep-tracker/",
   },
   {
-    title: "CryptoPortfolio",
-    subtitle: "Crypto Investment Tracker & Dashboard",
-    description:
-      "Built a real-time cryptocurrency tracking dashboard with virtual portfolio management. Features include live prices from CoinGecko API, interactive charts, market heatmap, watchlist, and a $10K virtual trading simulator with P&L tracking. Includes dark/light mode and full responsive design.",
-    highlights: [
-      "Live market data from CoinGecko API",
-      "$10K virtual trading simulator with P&L tracking",
-      "Interactive charts, market heatmap & watchlist",
-    ],
-    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "CoinGecko API"],
-    link: "https://github.com/SaharHalili95/crypto-portfolio",
-    demoLink: "https://saharhalili95.github.io/crypto-portfolio/",
-  },
-  {
     title: "Reaction Speed Test",
     subtitle: "Reflex Testing Game",
     description:
@@ -164,13 +192,6 @@ export const projectsData = [
     technologies: ["HTML5", "CSS3", "JavaScript", "PeerJS", "WebRTC"],
     link: "https://github.com/SaharHalili95/multiplayer-tictactoe",
     demoLink: "https://saharhalili95.github.io/multiplayer-tictactoe/",
-  },
-  {
-    title: "Rambo",
-    subtitle: "Personal Project",
-    description: "A mini-project showcasing my pet. Click to view details.",
-    isInternal: true,
-    internalLink: "/rambo",
   },
 ];
 
