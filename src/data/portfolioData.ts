@@ -54,6 +54,20 @@ export const skillsData = {
 
 export const projectsData = [
   {
+    title: "EasyMat",
+    subtitle: "AI-Powered Math Tutor for the Israeli Bagrut",
+    description:
+      "A full-stack AI math tutor built for Israeli high school students preparing for the Bagrut exam (3, 4, and 5 units). Combines RAG architecture with Claude API to deliver context-aware, curriculum-aligned answers. Students can select their unit level, ask questions in Hebrew or English, and upload photos of handwritten problems - Claude transcribes and solves them with LaTeX rendering.",
+    highlights: [
+      "RAG pipeline: Obsidian notes → Voyage AI embeddings → Pinecone vector search",
+      "Streamed Claude API responses with prompt caching to reduce costs ~90%",
+      "LaTeX math rendering via KaTeX for clean formula display",
+      "Image upload for handwritten equations - Claude transcribes to LaTeX",
+    ],
+    technologies: ["Next.js", "TypeScript", "Claude API", "Pinecone", "Voyage AI", "RAG", "KaTeX", "Tailwind CSS"],
+    link: "https://github.com/SaharHalili95/easymat",
+  },
+  {
     title: "NetSentinel",
     subtitle: "Network Security Monitoring Platform",
     description:
