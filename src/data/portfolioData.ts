@@ -66,6 +66,7 @@ export const projectsData = [
     ],
     technologies: ["Next.js", "TypeScript", "Claude API", "Pinecone", "Voyage AI", "RAG", "KaTeX", "Tailwind CSS"],
     link: "https://github.com/SaharHalili95/easymat",
+    demoLink: "https://saharhalili95.github.io/easymat/",
   },
   {
     title: "NetSentinel",
