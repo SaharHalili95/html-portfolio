@@ -112,13 +112,13 @@ export const projectsData = [
   },
   {
     title: "Vet-Book",
-    subtitle: "Veterinary Management System",
+    subtitle: "Veterinary Management Prototype",
     description:
-      "A full-stack veterinary clinic management app with appointment booking, medical records, weight tracking per pet, and automated email/SMS reminders for upcoming appointments. Features user authentication, a background reminder scheduler, and a Streamlit dashboard for clinic staff.",
+      "A full-stack veterinary clinic management prototype with appointment booking, medical records, weight tracking per pet, and automated email/SMS reminders for upcoming appointments. A background scheduler handles reminders, with a Streamlit dashboard for clinic staff.",
     highlights: [
       "Automated email and SMS reminders via background scheduler",
       "Medical records and weight history tracking per pet",
-      "Full user authentication with session management",
+      "Duplicate-booking detection on appointment creation",
     ],
     technologies: ["FastAPI", "Python", "Streamlit", "Pydantic", "Docker"],
     link: "https://github.com/SaharHalili95/Vet-Book",
