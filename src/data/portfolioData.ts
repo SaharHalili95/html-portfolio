@@ -65,7 +65,7 @@ export const projectsData = [
       "Image upload for handwritten equations - Claude transcribes to LaTeX",
     ],
     technologies: ["Next.js", "TypeScript", "Claude API", "Pinecone", "Voyage AI", "RAG", "KaTeX", "Tailwind CSS"],
-    link: "https://github.com/SaharHalili95/bagrut-master",
+    link: "https://github.com/SaharHalili95/easymat",
     demoLink: "https://saharhalili95.github.io/easymat-landing/",
   },
   {
