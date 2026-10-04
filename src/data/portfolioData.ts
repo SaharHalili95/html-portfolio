@@ -121,7 +121,6 @@ export const projectsData = [
       "Duplicate-booking detection on appointment creation",
     ],
     technologies: ["FastAPI", "Python", "Streamlit", "Pydantic", "Docker"],
-    link: "https://github.com/SaharHalili95/Vet-Book",
   },
   {
     title: "CryptoPortfolio",
