@@ -54,7 +54,22 @@ export const skillsData = {
 
 export const projectsData = [
   {
-    title: "בגרות מאסטר",
+    title: "HardenGarden",
+    subtitle: "Read-Only Linux Hardening Auditor with Local AI",
+    description:
+      "A desktop app and CLI that audits a Linux machine with 12 read-only security checks (SSH, firewall, listening services, file permissions, sudo, accounts, automatic updates, ASLR), computes a deterministic \"Garden Health\" score, and explains each finding with a local LLM through a RAG pipeline that cites its sources and refuses to guess. Every finding comes with a reviewed remediation script the user runs themselves - the app never changes the system. Ships as signed .deb and AppImage packages tested on Ubuntu 22.04, Ubuntu 24.04 and Debian 12.",
+    highlights: [
+      "Security by design: allowlisted commands, no shell, no privilege escalation, loopback-only API with a per-launch token",
+      "Grounded RAG with Ollama + ChromaDB + BM25: cited answers, prompt-injection defenses, deterministic refusals",
+      "Remediation scripts verified in disposable Docker containers: re-scan passes and SSH still starts",
+      "Supply chain: Sigstore-signed releases, SBOM, CodeQL, Trivy and a STRIDE threat model",
+    ],
+    technologies: ["Python", "FastAPI", "Ollama", "ChromaDB", "RAG", "Tauri", "Rust", "React", "TypeScript", "Docker", "GitHub Actions", "pytest", "Playwright"],
+    link: "https://github.com/SaharHalili95/hardengarden",
+    demoLink: "https://saharhalili95.github.io/hardengarden/",
+  },
+  {
+    title: "EasyMat",
     subtitle: "AI Math Tutor for the Israeli Bagrut",
     description:
       "A full-stack AI math tutor built for Israeli high school students preparing for the Bagrut exam (3, 4, and 5 units). Combines RAG architecture with Claude API to deliver context-aware, curriculum-aligned answers. Students can select their unit level, ask questions in Hebrew or English, and upload photos of handwritten problems - Claude transcribes and solves them with LaTeX rendering.",
