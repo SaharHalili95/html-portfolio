@@ -48,7 +48,7 @@ export const skillsData = {
   languages: ["Python", "C#", "JavaScript", "TypeScript"],
   techStack: [".NET 8", "ASP.NET Core", "EF Core", "React", "Vue.js", "Next.js", "FastAPI", "Node.js", "SQL", "SQL Server", "PostgreSQL", "Redis", "MongoDB", "Docker", "OpenAI API", "ChromaDB"],
   aiTools: ["Claude Code", "Cursor IDE", "GitHub Copilot", "Prompt Engineering"],
-  devTools: ["Git", "VS Code", "Railway", "Vercel", "Docker"],
+  devTools: ["Git", "VS Code", "Railway", "Vercel"],
   practices: ["OOP", "TDD", "Agile", "RAG Architecture", "Network Security", "Vector Embeddings"],
 };
 
@@ -57,7 +57,7 @@ export const projectsData = [
     title: "SalaryNet",
     subtitle: "Payroll & HR Management System in .NET 8 and Vue 3",
     description:
-      "A full-stack payroll and HR system built with ASP.NET Core 8 Web API in Clean Architecture (Domain, Application, Infrastructure, API) and a Vue 3 + TypeScript front end. Covers employees and departments, monthly payroll with a documented progressive tax and social-security calculation, attendance tracking with server-calculated hours, and a dashboard. Admin, HR and Employee roles are enforced with JWT policies, and employees can only ever reach their own payslips and attendance.",
+      "A full-stack payroll and HR system covering employees, departments, monthly payroll and attendance. Payslips break down a documented progressive income-tax and social-security calculation, employees clock in and out with hours calculated by the server, and a dashboard summarizes headcount and payroll cost. Admin, HR and Employee accounts each see only what their role allows.",
     highlights: [
       "Clean Architecture with a rich domain model: invariants enforced in entities, EF Core Fluent API mappings and migrations on SQL Server",
       "Database-enforced rules: a unique (EmployeeId, Year, Month) index blocks duplicate payslips even under concurrent requests",
@@ -72,7 +72,7 @@ export const projectsData = [
     title: "HardenGarden",
     subtitle: "Read-Only Linux Hardening Auditor with Local AI",
     description:
-      "A desktop app and CLI that audits a Linux machine with 12 read-only security checks (SSH, firewall, listening services, file permissions, sudo, accounts, automatic updates, ASLR), computes a deterministic \"Garden Health\" score, and explains each finding with a local LLM through a RAG pipeline that cites its sources and refuses to guess. Every finding comes with a reviewed remediation script the user runs themselves - the app never changes the system. Ships as signed .deb and AppImage packages tested on Ubuntu 22.04, Ubuntu 24.04 and Debian 12.",
+      "A desktop app and CLI that audits a Linux machine across SSH, firewall, listening services, file permissions, sudo, accounts, automatic updates and ASLR, then computes a deterministic \"Garden Health\" score. A local LLM explains each finding, and every finding comes with a remediation script the user runs themselves - the app never changes the system. Released as .deb and AppImage packages tested on Ubuntu 22.04, Ubuntu 24.04 and Debian 12.",
     highlights: [
       "Security by design: allowlisted commands, no shell, no privilege escalation, loopback-only API with a per-launch token",
       "Grounded RAG with Ollama + ChromaDB + BM25: cited answers, prompt-injection defenses, deterministic refusals",
@@ -87,7 +87,7 @@ export const projectsData = [
     title: "EasyMat",
     subtitle: "AI Math Tutor for the Israeli Bagrut",
     description:
-      "A full-stack AI math tutor built for Israeli high school students preparing for the Bagrut exam (3, 4, and 5 units). Combines RAG architecture with Claude API to deliver context-aware, curriculum-aligned answers. Students can select their unit level, ask questions in Hebrew or English, and upload photos of handwritten problems - Claude transcribes and solves them with LaTeX rendering.",
+      "A full-stack AI math tutor for Israeli high school students preparing for the Bagrut exam (3, 4 and 5 units). Students pick their unit level, ask questions in Hebrew or English, and get curriculum-aligned answers grounded in Bagrut material.",
     highlights: [
       "RAG pipeline: Bagrut exam notes → Voyage AI embeddings → Pinecone vector search",
       "Streamed Claude API responses with prompt caching to reduce costs ~90%",
@@ -102,7 +102,7 @@ export const projectsData = [
     title: "NetSentinel",
     subtitle: "Network Security Monitoring Platform",
     description:
-      "A production-grade platform giving security teams real-time visibility across their network - automated device discovery, vulnerability detection, anomaly analysis, and live WebSocket alerts. Containerized and SOC-ready, built to catch threats before they become incidents.",
+      "A platform that gives security teams real-time visibility across their network: automated device discovery, vulnerability detection and live WebSocket alerts, built to catch threats before they become incidents.",
     highlights: [
       "Detects intrusions and anomalies in real-time across the entire network",
       "SOC-ready: severity-based alerts, audit trail & network topology view",
@@ -117,7 +117,7 @@ export const projectsData = [
     title: "CodeMate AI",
     subtitle: "RAG-Powered Code Assistant",
     description:
-      "Built a professional AI code assistant using RAG (Retrieval Augmented Generation) architecture. Features semantic code search, AI-powered Q&A about codebases, and real-time chat with intelligent context retrieval. Implemented complete RAG pipeline: code parsing & chunking, OpenAI embeddings generation, ChromaDB vector storage, and GPT-4 integration. Modern React TypeScript frontend with syntax highlighting, file upload, and analytics dashboard. Deployed on Railway (backend) and Vercel (frontend).",
+      "An AI code assistant: upload a codebase, then ask questions about it in a real-time chat that retrieves the relevant code as context. The React TypeScript front end adds syntax highlighting, file upload and an analytics dashboard.",
     highlights: [
       "End-to-end RAG pipeline: parsing, embeddings, vector search & GPT-4",
       "Production deployed on Railway + Vercel",
@@ -131,7 +131,7 @@ export const projectsData = [
     title: "NitaiBot",
     subtitle: "AI-Powered Telegram Content Bot",
     description:
-      "A Telegram bot that generates professional Hebrew product pages for eCommerce using the Claude API (Anthropic). Given a product name or SKU, the bot produces structured marketing content including specs, highlights, and SEO-ready HTML - styled to the standards of leading Israeli retail chains. Built with Python, Flask, and the Anthropic SDK.",
+      "A Telegram bot for eCommerce teams: send a product name or SKU and get back a complete product page with specs and marketing highlights, styled to the standards of leading Israeli retail chains.",
     highlights: [
       "Generates full product pages in Hebrew using Claude (Anthropic API)",
       "Outputs SEO-ready HTML formatted for WordPress embedding",
@@ -144,7 +144,7 @@ export const projectsData = [
     title: "Vet-Book",
     subtitle: "Veterinary Management Prototype",
     description:
-      "A full-stack veterinary clinic management prototype with appointment booking, medical records, weight tracking per pet, and automated email/SMS reminders for upcoming appointments. A background scheduler handles reminders, with a Streamlit dashboard for clinic staff.",
+      "A full-stack prototype for running a veterinary clinic, with appointment booking for pets and a Streamlit dashboard for clinic staff.",
     highlights: [
       "Automated email and SMS reminders via background scheduler",
       "Medical records and weight history tracking per pet",
@@ -156,7 +156,7 @@ export const projectsData = [
     title: "CryptoPortfolio",
     subtitle: "Crypto Investment Tracker & Dashboard",
     description:
-      "Built a real-time cryptocurrency tracking dashboard with virtual portfolio management. Features live prices from CoinGecko API, interactive charts, market heatmap, watchlist, price alert system with browser notifications, and a $10K virtual trading simulator with P&L tracking. Includes dark/light mode and full responsive design.",
+      "A cryptocurrency dashboard for following the market and practising portfolio management without real money, with dark/light mode and a fully responsive design.",
     highlights: [
       "Live market data from CoinGecko API",
       "$10K virtual trading simulator with P&L tracking",
@@ -171,7 +171,7 @@ export const projectsData = [
     title: "Budget Balance Game",
     subtitle: "Interactive Financial Education Game",
     description:
-      "Developed an interactive financial management game using React and TypeScript. Features 5 progression levels, 8 achievements with tracking, monthly challenges, and a comprehensive financial reporting system that acts like a personal accountant. Includes bilingual support (English/Hebrew with RTL), decision tracking, and real-time analytics with personalized recommendations. Built with modern animations and responsive design.",
+      "A financial management game that teaches budgeting through monthly challenges and decision tracking, with a reporting system that acts like a personal accountant. Built with animations and a responsive design.",
     highlights: [
       "5 progression levels with 8 unlockable achievements",
       "Bilingual (English/Hebrew) with full RTL support",
@@ -183,9 +183,9 @@ export const projectsData = [
   },
   {
     title: "Smart Price Comparison Platform",
-    subtitle: "Full-Stack Project",
+    subtitle: "Multi-Store Price Comparison App",
     description:
-      "Developed a full-stack price comparison web app using FastAPI (Python) and React TypeScript. Leveraged Cursor AI to accelerate development, specifically for complex data validation and Pydantic model structuring. Built automated product search and price tracking features across multiple stores with a focus on type safety and responsive design.",
+      "A full-stack web app that searches products and compares their prices across multiple stores, with a FastAPI (Python) backend and a responsive React TypeScript front end.",
     highlights: [
       "Automated multi-store price tracking & comparison",
       "AI-accelerated development workflow with Cursor",
@@ -197,9 +197,9 @@ export const projectsData = [
   },
   {
     title: "Interview Prep Tracker",
-    subtitle: "Full-Stack Project",
+    subtitle: "Coding Interview Practice Tracker",
     description:
-      "Built a coding interview preparation tracker with question management, progress tracking, and LeetCode integration. Deployed as a static app on GitHub Pages using localStorage for offline-first usage - no backend required. Features CRUD operations, difficulty filtering, category organization, and sample questions on first load.",
+      "A tracker for coding interview preparation: manage questions with full CRUD, organize them by category and follow your progress. Data stays in the browser with localStorage, and sample questions load on first launch.",
     highlights: [
       "Static GitHub Pages deployment - zero backend required",
       "LeetCode integration with direct problem links",
@@ -213,7 +213,7 @@ export const projectsData = [
     title: "Reaction Speed Test",
     subtitle: "Reflex Testing Game",
     description:
-      "Built a reaction speed testing game with 3 game modes: Reaction Time (click when screen turns green), Target Click (hit random targets), and Number Sequence (click 1-25 in order). Features performance benchmarks, stats tracking with bar charts, localStorage history, and a responsive dark theme UI.",
+      "A reflex game with Reaction Time (click when the screen turns green), Target Click (hit random targets) and Number Sequence (click 1-25 in order) modes, with history saved in localStorage and a responsive dark theme.",
     highlights: [
       "3 game modes for comprehensive reflex testing",
       "Performance benchmarks with historical stats tracking",
@@ -227,7 +227,7 @@ export const projectsData = [
     title: "Multiplayer Tic Tac Toe",
     subtitle: "Real-Time Multiplayer Game",
     description:
-      "Built a real-time multiplayer Tic Tac Toe game playable from two different computers via peer-to-peer WebRTC (no backend server required). Features vs-Computer mode with Minimax AI across three difficulty levels (Easy, Medium, Unbeatable), trilingual support (Hebrew, English, Arabic) with automatic RTL/LTR switching, in-game chat between players, and persistent score tracking across rounds. Deployed as a static site on GitHub Pages.",
+      "A Tic Tac Toe game two people can play from different computers, with in-game chat between players and persistent score tracking across rounds. Deployed as a static site on GitHub Pages.",
     highlights: [
       "Peer-to-peer WebRTC multiplayer - zero backend required",
       "Minimax AI with 3 difficulty levels (Easy to Unbeatable)",
@@ -241,7 +241,7 @@ export const projectsData = [
     title: "Rambo",
     subtitle: "Pit Bull Breed Advocacy Site",
     description:
-      "A bilingual (Hebrew/English) educational site built to change the public perception of Pit Bulls. Features a personal photo gallery of Rambo, breed facts backed by research, myth-busting content, and stories about Pit Bulls serving as therapy and rescue dogs. Built with full RTL support and auto-advancing slideshow.",
+      "An educational site built to change the public perception of Pit Bulls, with a personal photo gallery of Rambo in an auto-advancing slideshow.",
     highlights: [
       "Bilingual Hebrew/English with automatic RTL/LTR switching",
       "Myth-busting section backed by temperament research data",
