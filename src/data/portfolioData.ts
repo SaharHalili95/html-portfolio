@@ -45,14 +45,29 @@ export const educationData = {
 };
 
 export const skillsData = {
-  languages: ["Python", "JavaScript", "TypeScript"],
-  techStack: ["React", "Next.js", "FastAPI", "Node.js", "SQL", "PostgreSQL", "Redis", "MongoDB", "Docker", "OpenAI API", "ChromaDB"],
+  languages: ["Python", "C#", "JavaScript", "TypeScript"],
+  techStack: [".NET 8", "ASP.NET Core", "EF Core", "React", "Vue.js", "Next.js", "FastAPI", "Node.js", "SQL", "SQL Server", "PostgreSQL", "Redis", "MongoDB", "Docker", "OpenAI API", "ChromaDB"],
   aiTools: ["Claude Code", "Cursor IDE", "GitHub Copilot", "Prompt Engineering"],
   devTools: ["Git", "VS Code", "Railway", "Vercel", "Docker"],
   practices: ["OOP", "TDD", "Agile", "RAG Architecture", "Network Security", "Vector Embeddings"],
 };
 
 export const projectsData = [
+  {
+    title: "SalaryNet",
+    subtitle: "Payroll & HR Management System in .NET 8 and Vue 3",
+    description:
+      "A full-stack payroll and HR system built with ASP.NET Core 8 Web API in Clean Architecture (Domain, Application, Infrastructure, API) and a Vue 3 + TypeScript front end. Covers employees and departments, monthly payroll with a documented progressive tax and social-security calculation, attendance tracking with server-calculated hours, and a dashboard. Admin, HR and Employee roles are enforced with JWT policies, and employees can only ever reach their own payslips and attendance.",
+    highlights: [
+      "Clean Architecture with a rich domain model: invariants enforced in entities, EF Core Fluent API mappings and migrations on SQL Server",
+      "Database-enforced rules: a unique (EmployeeId, Year, Month) index blocks duplicate payslips even under concurrent requests",
+      "Resource-level authorization against IDOR, FluentValidation, and RFC 7807 ProblemDetails for every error",
+      "123 xUnit tests: unit tests with Moq and integration tests with WebApplicationFactory against SQL Server in Testcontainers",
+    ],
+    technologies: ["C#", ".NET 8", "ASP.NET Core Web API", "EF Core", "SQL Server", "JWT", "FluentValidation", "xUnit", "Testcontainers", "Vue 3", "TypeScript", "PrimeVue", "Docker", "GitHub Actions"],
+    link: "https://github.com/SaharHalili95/SalaryNet",
+    demoLink: "https://saharhalili95.github.io/SalaryNet/",
+  },
   {
     title: "HardenGarden",
     subtitle: "Read-Only Linux Hardening Auditor with Local AI",
