@@ -61,8 +61,8 @@ export const projectsData = [
     highlights: [
       "Clean Architecture with a rich domain model: invariants enforced in entities, EF Core Fluent API mappings and migrations on SQL Server",
       "Database-enforced rules: a unique (EmployeeId, Year, Month) index blocks duplicate payslips even under concurrent requests",
-      "Resource-level authorization against IDOR, FluentValidation, and RFC 7807 ProblemDetails for every error",
-      "123 xUnit tests: unit tests with Moq and integration tests with WebApplicationFactory against SQL Server in Testcontainers",
+      "Security: resource-level authorization against IDOR, account lockout with admin unlock, and a password policy",
+      "162 xUnit tests: unit tests with Moq and integration tests with WebApplicationFactory against SQL Server in Testcontainers",
     ],
     technologies: ["C#", ".NET 8", "ASP.NET Core Web API", "EF Core", "SQL Server", "JWT", "FluentValidation", "xUnit", "Testcontainers", "Vue 3", "TypeScript", "PrimeVue", "Docker", "GitHub Actions"],
     link: "https://github.com/SaharHalili95/SalaryNet",
