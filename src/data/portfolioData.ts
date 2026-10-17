@@ -5,7 +5,7 @@ export const profileData = {
   summary:
     "Building secure, production-ready systems from the ground up - network monitoring, SOC 2 compliance, and AI-powered applications. Security-first mindset with full-stack delivery speed.",
   social: {
-    linkedin: "https://www.linkedin.com/in/sahar-halili-36ba38300",
+    linkedin: "https://www.linkedin.com/in/sahar-halili",
     github: "https://github.com/SaharHalili95",
   },
 };
