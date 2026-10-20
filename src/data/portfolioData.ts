@@ -1,9 +1,9 @@
 export const profileData = {
   name: "Sahar Halili",
-  title: "AI Engineer & Full-Stack Developer",
+  title: "Software Engineer | Full-Stack & AI",
   image: "/images/sh-portfolio.png",
   summary:
-    "Building secure, production-ready systems from the ground up - network monitoring, SOC 2 compliance, and AI-powered applications. Security-first mindset with full-stack delivery speed.",
+    "I design and build reliable, user-focused software, from intuitive interfaces to scalable backend systems. I bring a practical, thoughtful approach to solving problems and turn ideas into polished digital products.",
   social: {
     linkedin: "https://www.linkedin.com/in/sahar-halili",
     github: "https://github.com/SaharHalili95",
