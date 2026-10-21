@@ -55,16 +55,17 @@ export const skillsData = {
 export const projectsData = [
   {
     title: "SalaryNet",
-    subtitle: "Payroll & HR Management System in .NET 8 and Vue 3",
+    subtitle: "Payroll & HR Management System in .NET 8 with Vue 3 and Angular",
     description:
       "A full-stack payroll and HR system covering employees, departments, monthly payroll and attendance. Payslips break down a documented progressive income-tax and social-security calculation, employees clock in and out with hours calculated by the server, and a dashboard summarizes headcount and payroll cost. Admin, HR and Employee accounts each see only what their role allows, in English or in Hebrew with a full right-to-left layout.",
     highlights: [
       "Clean Architecture with a rich domain model: invariants enforced in entities, EF Core Fluent API mappings and migrations on SQL Server",
       "Database-enforced rules: a unique (EmployeeId, Year, Month) index blocks duplicate payslips even under concurrent requests",
       "Security: resource-level authorization against IDOR, account lockout with admin unlock, and a password policy",
+      "Two front ends on the same API: Vue 3 is the full app, Angular (Signals, interceptors, Reactive Forms, RxJS) covers the core flows; contract, demo engine and translations are shared",
       "162 xUnit tests: unit tests with Moq and integration tests with WebApplicationFactory against SQL Server in Testcontainers",
     ],
-    technologies: ["C#", ".NET 8", "ASP.NET Core Web API", "EF Core", "SQL Server", "JWT", "FluentValidation", "xUnit", "Testcontainers", "Vue 3", "TypeScript", "vue-i18n", "PrimeVue", "Docker", "GitHub Actions"],
+    technologies: ["C#", ".NET 8", "ASP.NET Core Web API", "EF Core", "SQL Server", "JWT", "FluentValidation", "xUnit", "Testcontainers", "Vue 3", "Angular", "TypeScript", "vue-i18n", "PrimeVue", "Angular Material", "Docker", "GitHub Actions"],
     link: "https://github.com/SaharHalili95/SalaryNet",
     demoLink: "https://saharhalili95.github.io/SalaryNet/",
   },
