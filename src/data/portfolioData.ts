@@ -26,11 +26,11 @@ export const experienceData = [
 
 export const militaryData = {
   service: {
-    organization: "Israel Defense Forces (IDF)",
+    organization: "IDF C4I Corps | Command & Control (C2) Department",
     period: "2014–2017",
     highlights: [
-      "Developed strong communication and teamwork skills through problem-solving.",
-      "Operated under pressure in complex environments.",
+      "Worked with Windows-based command-and-control systems and terminal tools in an operational environment.",
+      "Gained practical familiarity with routine system operation, basic troubleshooting, and following technical procedures as part of a team.",
     ],
   },
   reserve: {
