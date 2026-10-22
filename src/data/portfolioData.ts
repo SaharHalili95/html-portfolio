@@ -101,13 +101,13 @@ export const projectsData = [
   },
   {
     title: "Linux Master",
-    subtitle: "Hebrew Linux Command Trainer",
+    subtitle: "Bilingual Linux Command Trainer (Hebrew / English)",
     description:
-      "An installable web app that teaches Linux commands in Hebrew, based on the OverTheWire Bandit wargame. Learners move through seven levels, from single commands and their options to pipelines with several flags and full sysadmin workflows, with an explanation and example after every answer. Works offline and installs to the iPhone home screen.",
+      "An installable web app that teaches Linux commands in Hebrew and English, based on the OverTheWire Bandit wargame. Learners move through seven levels, from single commands and their options to pipelines with several flags and full sysadmin workflows, with an explanation and example after every answer. Works offline and installs to the iPhone home screen.",
     highlights: [
-      "Seven-level curriculum: 46 commands, 450 option usages and 75 real-world pipeline and workflow scenarios",
+      "Seven-level curriculum: 46 commands asked both ways, 450 option usages and 75 pipeline and workflow scenarios, every answer verified on Ubuntu",
       "Rounds of 20 questions with per-level progress saved after every answer, so a session can stop and resume anywhere",
-      "Offline-first PWA: service worker caching, web manifest, full RTL layout",
+      "Offline-first PWA with network-first updates, plus a one-tap Hebrew/English switch (RTL and LTR) with all content translated",
       "Static site with no dependencies, deployed to GitHub Pages by GitHub Actions",
     ],
     technologies: ["HTML5", "CSS3", "JavaScript", "PWA", "Service Worker", "Linux", "Bash", "GitHub Actions"],
