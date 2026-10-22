@@ -100,6 +100,21 @@ export const projectsData = [
     demoLink: "https://saharhalili95.github.io/easymat-landing/",
   },
   {
+    title: "Linux Master",
+    subtitle: "Hebrew Linux Command Trainer",
+    description:
+      "An installable web app that teaches Linux commands in Hebrew, based on the OverTheWire Bandit wargame. Learners move through seven levels, from single commands and their options to pipelines with several flags and full sysadmin workflows, with an explanation and example after every answer. Works offline and installs to the iPhone home screen.",
+    highlights: [
+      "Seven-level curriculum: 46 commands, 450 option usages and 75 real-world pipeline and workflow scenarios",
+      "Rounds of 20 questions with per-level progress saved after every answer, so a session can stop and resume anywhere",
+      "Offline-first PWA: service worker caching, web manifest, full RTL layout",
+      "Static site with no dependencies, deployed to GitHub Pages by GitHub Actions",
+    ],
+    technologies: ["HTML5", "CSS3", "JavaScript", "PWA", "Service Worker", "Linux", "Bash", "GitHub Actions"],
+    link: "https://github.com/SaharHalili95/linux-master",
+    demoLink: "https://saharhalili95.github.io/linux-master/",
+  },
+  {
     title: "NetSentinel",
     subtitle: "Network Security Monitoring Platform",
     description:
