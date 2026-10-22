@@ -183,16 +183,16 @@ export const projectsData = [
     demoLink: "https://saharhalili95.github.io/budget-balance-game/",
   },
   {
-    title: "Smart Price Comparison Platform",
-    subtitle: "Multi-Store Price Comparison App",
+    title: "SalSmart",
+    subtitle: "Grocery Price Comparison on Official Data",
     description:
-      "A full-stack web app that searches products and compares their prices across multiple stores, with a FastAPI (Python) backend and a responsive React TypeScript front end.",
+      "Ingests the daily price files Israeli supermarket chains must publish (1.6M prices per run), normalizes their XML dialects into PostgreSQL with change-only history, and lets shoppers compare a basket across stores in their city.",
     highlights: [
-      "Automated multi-store price tracking & comparison",
-      "AI-accelerated development workflow with Cursor",
-      "End-to-end type safety with Pydantic + TypeScript",
+      "Streaming XML parsing: a 34 MB file in about 1 MB of memory",
+      "A Kubernetes CronJob per chain, tested on kind in CI",
+      "Price-drop alerts through RabbitMQ, monitored with Prometheus and Grafana",
     ],
-    technologies: ["FastAPI", "React", "TypeScript", "Python", "Pydantic"],
+    technologies: ["Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Kubernetes", "RabbitMQ", "Prometheus"],
     link: "https://github.com/SaharHalili95/price-comparison-platform",
     demoLink: "https://saharhalili95.github.io/price-comparison-platform/",
   },
