@@ -101,16 +101,16 @@ export const projectsData = [
   },
   {
     title: "Linux Master",
-    subtitle: "Bilingual Linux Command Trainer (Hebrew / English)",
+    subtitle: "Bilingual Linux Command Trainer with a Simulated Terminal",
     description:
-      "An installable web app that teaches Linux commands in Hebrew and English, based on the OverTheWire Bandit wargame. Learners move through seven levels, from single commands and their options to pipelines with several flags and full sysadmin workflows, with an explanation and example after every answer. Works offline and installs to the iPhone home screen.",
+      "An installable web app that teaches Linux commands in English and Hebrew, based on the OverTheWire Bandit wargame. Learners move through eight levels, from single commands to pipelines and a Bandit toolkit, then solve 12 Bandit-style missions in a simulated terminal. Typed answers are checked by running them, and every wrong answer comes with an explanation. Works offline with no server or account.",
     highlights: [
-      "Seven-level curriculum: 46 commands asked both ways, 450 option usages and 75 pipeline and workflow scenarios, every answer verified on Ubuntu",
-      "Spaced repetition (Leitner boxes): mistakes return within the round and in later rounds, plus a typing mode with lenient command matching",
-      "Offline-first PWA with network-first updates, plus a one-tap Hebrew/English switch (RTL and LTR) with all content translated",
-      "Bandit path: a map of all 34 levels and a tools stage; 130+ Playwright tests and every answer executed on Ubuntu in CI",
+      "Simulated shell (pipes, redirection, globs, find, awk, sed and ~30 commands): a different typed command is accepted when its output matches, verified against real Ubuntu by a 570-command differential test",
+      "12 terminal missions shaped like Bandit levels 1-12, each planting a fresh random password, plus a map of all 34 levels",
+      "Spaced repetition (Leitner boxes), a one-tap choice/typing switch, an explanation for every wrong answer, daily goal and streak, and progress backup",
+      "About 380 Playwright tests on 4 devices, axe WCAG 2.1 AA, Lighthouse 98/100/100/100 and every answer executed on Ubuntu in CI before each deploy",
     ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "PWA", "Service Worker", "Linux", "Bash", "Playwright", "Docker", "GitHub Actions"],
+    technologies: ["HTML5", "CSS3", "JavaScript", "PWA", "Service Worker", "Linux", "Bash", "Playwright", "Docker", "GitHub Actions", "Lighthouse CI"],
     link: "https://github.com/SaharHalili95/linux-master",
     demoLink: "https://saharhalili95.github.io/linux-master/",
   },
