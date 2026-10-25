@@ -116,16 +116,16 @@ export const projectsData = [
   },
   {
     title: "NetSentinel",
-    subtitle: "Network Security Monitoring Platform",
+    subtitle: "Home Network Security Monitor",
     description:
-      "A platform that gives security teams real-time visibility across their network: automated device discovery, vulnerability detection and live WebSocket alerts, built to catch threats before they become incidents.",
+      "Shows what is connected to a home network and whether anything looks wrong: device discovery and port scanning with nmap, traffic sampling with GeoIP, anomaly rules for suspicious ports, watchlist countries and traffic spikes, live WebSocket alerts and SOC 2 daily checks. The live demo is the real app in English and Hebrew.",
     highlights: [
-      "Detects intrusions and anomalies in real-time across the entire network",
-      "SOC-ready: severity-based alerts, audit trail & network topology view",
-      "Production-grade: FastAPI + Next.js + PostgreSQL + Redis + Docker",
-      "Full unit test coverage for anomaly detection and alert management",
+      "Anomaly rules turn scans and traffic into alerts with an open, acknowledged, resolved lifecycle",
+      "English and Hebrew with full RTL; axe finds no WCAG 2.1 AA violations on any page",
+      "Playwright tests on iPhone, Android and desktop, plus pytest and Vitest, all in CI",
+      "The demo is the real Next.js app exported as static files with an in-browser sample network",
     ],
-    technologies: ["FastAPI", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "WebSocket", "Tailwind CSS", "SQLAlchemy", "Recharts", "pytest"],
+    technologies: ["FastAPI", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "WebSocket", "nmap", "Scapy", "Tailwind CSS", "Recharts", "pytest", "Vitest", "Playwright"],
     link: "https://github.com/SaharHalili95/netsentinel",
     demoLink: "https://saharhalili95.github.io/netsentinel/",
   },
