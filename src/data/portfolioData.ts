@@ -68,6 +68,10 @@ export const projectsData = [
     technologies: ["C#", ".NET 8", "ASP.NET Core Web API", "EF Core", "SQL Server", "JWT", "FluentValidation", "xUnit", "Testcontainers", "Vue 3", "Angular", "TypeScript", "vue-i18n", "PrimeVue", "Angular Material", "Docker", "GitHub Actions"],
     link: "https://github.com/SaharHalili95/SalaryNet",
     demoLink: "https://saharhalili95.github.io/SalaryNet/",
+    extraLinks: [
+      { label: "Angular version", url: "https://saharhalili95.github.io/SalaryNet/angular/" },
+      { label: "Angular code", url: "https://github.com/SaharHalili95/SalaryNet/tree/main/web-angular" },
+    ],
   },
   {
     title: "HardenGarden",

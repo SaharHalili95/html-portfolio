@@ -68,6 +68,17 @@ const Projects = () => {
               >
                 <i className="fas fa-external-link-alt"></i> View Project Site
               </a>
+              {project.extraLinks?.map((extra) => (
+                <a
+                  key={extra.url}
+                  href={extra.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="demo-link"
+                >
+                  <i className="fas fa-external-link-alt"></i> {extra.label}
+                </a>
+              ))}
             </div>
           )}
         </motion.div>
