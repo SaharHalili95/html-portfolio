@@ -16,10 +16,10 @@ export const experienceData = [
     company: "Yeshivat Bnei Akiva Lapid, Modi'in",
     period: "2025–Present",
     responsibilities: [
-      "Taught programming (Python) and advanced mathematics to high school students.",
-      "Built student confidence in mathematical and algorithmic problem-solving through structured methodologies.",
-      "Enhanced communication skills by explaining complex technical concepts clearly.",
-      "Connected mathematical theory to practical programming applications.",
+      "Teach programming (Python) and advanced mathematics to high school students.",
+      "Build student confidence in mathematical and algorithmic problem-solving through structured methodologies.",
+      "Explain complex technical concepts clearly to students at different levels.",
+      "Connect mathematical theory to practical programming applications.",
     ],
   },
 ];
@@ -46,10 +46,10 @@ export const educationData = {
 
 export const skillsData = {
   languages: ["Python", "C#", "JavaScript", "TypeScript"],
-  techStack: [".NET 8", "ASP.NET Core", "EF Core", "React", "Vue.js", "Next.js", "FastAPI", "Node.js", "SQL", "SQL Server", "PostgreSQL", "Redis", "MongoDB", "Docker", "OpenAI API", "ChromaDB"],
-  aiTools: ["Claude Code", "Cursor IDE", "GitHub Copilot", "Prompt Engineering"],
-  devTools: ["Git", "VS Code", "Railway", "Vercel"],
-  practices: ["OOP", "TDD", "Agile", "RAG Architecture", "Network Security", "Vector Embeddings"],
+  techStack: [".NET 8", "ASP.NET Core", "EF Core", "React", "Vue.js", "Angular", "Next.js", "FastAPI", "Node.js", "SQL", "SQL Server", "PostgreSQL", "Redis", "MongoDB", "RabbitMQ", "Docker", "Kubernetes", "Prometheus", "Grafana"],
+  aiTools: ["Claude API", "OpenAI API", "Ollama", "Pinecone", "ChromaDB", "Claude Code", "Cursor IDE", "GitHub Copilot"],
+  devTools: ["Git", "GitHub Actions", "xUnit", "Testcontainers", "pytest", "Vitest", "Playwright", "VS Code"],
+  practices: ["OOP", "Clean Architecture", "TDD", "Code Review", "Agile", "RAG Architecture", "Network Security", "Accessibility (WCAG)"],
 };
 
 export const projectsData = [
@@ -134,16 +134,31 @@ export const projectsData = [
     demoLink: "https://saharhalili95.github.io/netsentinel/",
   },
   {
+    title: "MeshMind AI",
+    subtitle: "Adaptive Network Routing with Reinforcement Learning",
+    description:
+      "A tabular Q-learning agent that routes traffic hop by hop across a simulated backbone network (Abilene, 12 PoPs), seeing only local congestion. It is benchmarked against shortest-path, congestion-aware and random routing across 10 seeds on held-out traffic.",
+    highlights: [
+      "Q-learning from scratch: exact Bellman update, epsilon-greedy with decay, read-only evaluation mode",
+      "Congestion-aware simulator: capacity, latency, quadratic penalty above 80% utilization, packet loss",
+      "Reproducible protocol: paired comparisons, permutation tests and bootstrap confidence intervals",
+      "Live in-browser simulator (Vue 3 + TypeScript) that reproduces the Python results, in English and Hebrew",
+    ],
+    technologies: ["Python", "Reinforcement Learning", "pytest", "Vue 3", "TypeScript", "PrimeVue", "Vitest", "GitHub Actions"],
+    link: "https://github.com/SaharHalili95/meshmind-ai",
+    demoLink: "https://saharhalili95.github.io/meshmind-ai/",
+  },
+  {
     title: "CodeMate AI",
     subtitle: "RAG-Powered Code Assistant",
     description:
       "An AI code assistant: upload a codebase, then ask questions about it in a real-time chat that retrieves the relevant code as context. The React TypeScript front end adds syntax highlighting, file upload and an analytics dashboard.",
     highlights: [
-      "End-to-end RAG pipeline: parsing, embeddings, vector search & GPT-4",
-      "Production deployed on Railway + Vercel",
-      "Semantic search across entire codebases in seconds",
+      "End-to-end RAG pipeline: parsing, chunking, embeddings, vector search and generation",
+      "Embedder and ChatModel interfaces: OpenAI, Anthropic and a demo mode that needs no API key, with no provider branches in the routes",
+      "Thin FastAPI routes over a single RAG service, covered by pytest in CI",
     ],
-    technologies: ["FastAPI", "OpenAI API", "ChromaDB", "RAG", "React", "TypeScript", "Tailwind CSS", "Vector Embeddings", "Railway", "Vercel"],
+    technologies: ["FastAPI", "OpenAI API", "Claude API", "ChromaDB", "RAG", "pytest", "React", "TypeScript", "Tailwind CSS", "Vector Embeddings"],
     link: "https://github.com/SaharHalili95/codemate-ai",
     demoLink: "https://saharhalili95.github.io/codemate-ai/",
   },
@@ -171,6 +186,7 @@ export const projectsData = [
       "Duplicate-booking detection on appointment creation",
     ],
     technologies: ["FastAPI", "Python", "Streamlit", "Pydantic", "Docker"],
+    link: "https://github.com/SaharHalili95/Vet-Book",
   },
   {
     title: "CryptoPortfolio",
@@ -219,7 +235,7 @@ export const projectsData = [
     title: "Interview Prep Tracker",
     subtitle: "Coding Interview Practice Tracker",
     description:
-      "A tracker for coding interview preparation: manage questions with full CRUD, organize them by category and follow your progress. Data stays in the browser with localStorage, and sample questions load on first launch.",
+      "A tracker for coding interview preparation: manage questions with full CRUD, organize them by category and follow your progress. The web app keeps data in the browser with localStorage; a separate FastAPI + MongoDB REST API, tested with pytest, serves the same data model.",
     highlights: [
       "Static GitHub Pages deployment - zero backend required",
       "LeetCode integration with direct problem links",
