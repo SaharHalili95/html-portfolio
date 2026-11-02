@@ -105,14 +105,14 @@ export const projectsData = [
   },
   {
     title: "Linux Master",
-    subtitle: "Bilingual Linux Command Trainer with a Simulated Terminal",
+    subtitle: "80-Unit Linux Course for LPIC-1, RHCSA and LFCS, in English and Hebrew",
     description:
-      "An installable web app that teaches Linux commands in English and Hebrew, based on the OverTheWire Bandit wargame. Learners move through eight levels, from single commands to pipelines and a Bandit toolkit, then solve 12 Bandit-style missions in a simulated terminal. Typed answers are checked by running them, and every wrong answer comes with an explanation. Works offline with no server or account.",
+      "A game-style web app that takes learners from their first command to Linux certification. An 80-unit path in 10 parts covers every LPIC-1 v5.0 objective plus RHCSA and LFCS topics: text processing, permissions, disks and LVM, users and systemd, packages, networking and SSH, scripting, security, and three mock exams. Each unit has 4 short lessons, a chest and a terminal boss. The original trivia mode stays in the app for bonus practice. No server or account.",
     highlights: [
-      "Simulated shell (pipes, redirection, globs, find, awk, sed and ~30 commands): a different typed command is accepted when its output matches, verified against real Ubuntu by a 570-command differential test",
-      "12 terminal missions shaped like Bandit levels 1-12, each planting a fresh random password, plus a map of all 34 levels",
-      "Spaced repetition (Leitner boxes), a one-tap choice/typing switch, an explanation for every wrong answer, daily goal and streak, and progress backup",
-      "About 380 Playwright tests on 4 devices, axe WCAG 2.1 AA, Lighthouse 98/100/100/100 and every answer executed on Ubuntu in CI before each deploy",
+      "80 units with exercises like build the command from tiles, fill the flag, \"what does it print?\", match pairs and live terminal tasks, plus XP, streak, gems and daily quests",
+      "No invented output: answers run in a simulated shell (pipes, redirection, globs, find, awk, sed) or come from output recorded on real Ubuntu 24.04 and AlmaLinux 10 in Docker",
+      "Mock exams: LPIC-1 with 60 questions weighted by objective, a 90-minute timer and a 500/800 pass mark, plus RHCSA and LFCS with 20 questions each",
+      "Playwright on 4 devices plays every unit, checks every exercise is answerable and translated and every LPIC-1 objective is covered, with axe WCAG 2.1 AA and every answer executed on Ubuntu in CI",
     ],
     technologies: ["HTML5", "CSS3", "JavaScript", "PWA", "Service Worker", "Linux", "Bash", "Playwright", "Docker", "GitHub Actions", "Lighthouse CI"],
     link: "https://github.com/SaharHalili95/linux-master",
