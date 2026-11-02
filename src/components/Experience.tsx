@@ -32,6 +32,11 @@ const Experience = () => {
         <p>
           <strong>Reserve Service</strong> | {militaryData.reserve.period}
         </p>
+        <ul>
+          {militaryData.reserve.highlights.map((highlight, i) => (
+            <li key={i}>{highlight}</li>
+          ))}
+        </ul>
       </Section>
     </>
   );
