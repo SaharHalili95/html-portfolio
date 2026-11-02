@@ -13,7 +13,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2 + index * 0.15 }}
+          transition={{ delay: 0.2 }}
           whileHover={{ scale: 1.02, boxShadow: "0 8px 30px rgba(0,0,0,0.12)" }}
         >
           <h3>
@@ -37,7 +37,7 @@ const Projects = () => {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3 + index * 0.15 + i * 0.1 }}
+                  transition={{ delay: 0.3 + i * 0.1 }}
                 >
                   <i className="fas fa-bolt"></i>
                   <span>{highlight}</span>
