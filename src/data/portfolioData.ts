@@ -107,12 +107,12 @@ export const projectsData = [
     title: "Linux Master",
     subtitle: "80-Unit Linux Course for LPIC-1, RHCSA and LFCS, in English and Hebrew",
     description:
-      "A game-style web app that takes learners from their first command to Linux certification. An 80-unit path in 10 parts covers every LPIC-1 v5.0 objective plus RHCSA and LFCS topics: text processing, permissions, disks and LVM, users and systemd, packages, networking and SSH, scripting, security, and three mock exams. Each unit has 4 short lessons, a chest and a terminal boss. The original trivia mode stays in the app for bonus practice. No server or account.",
+      "A phone-first, game-style web app for learning Linux anywhere, anytime, in short lessons that fit a bus ride or a coffee break, from the first command all the way to certification. An 80-unit path in 10 parts covers every LPIC-1 v5.0 objective plus RHCSA and LFCS topics: text processing, permissions, disks and LVM, users and systemd, packages, networking and SSH, scripting, security, and three mock exams. Each unit has 4 short lessons, a chest and a terminal boss. The original trivia mode stays in the app for bonus practice. No server or account.",
     highlights: [
       "80 units with exercises like build the command from tiles, fill the flag, \"what does it print?\", match pairs and live terminal tasks, plus XP, streak, gems and daily quests",
       "No invented output: answers run in a simulated shell (pipes, redirection, globs, find, awk, sed) or come from output recorded on real Ubuntu 24.04 and AlmaLinux 10 in Docker",
       "Mock exams: LPIC-1 with 60 questions weighted by objective, a 90-minute timer and a 500/800 pass mark, plus RHCSA and LFCS with 20 questions each",
-      "Playwright on 4 devices plays every unit, checks every exercise is answerable and translated and every LPIC-1 objective is covered, with axe WCAG 2.1 AA and every answer executed on Ubuntu in CI",
+      "Built for the phone: installs to the home screen, every screen fits a small display with no sideways scrolling, and Playwright on iPhone 13, iPhone SE, Pixel 7 and desktop plays every unit, checks every exercise is answerable and translated and every LPIC-1 objective is covered, with axe WCAG 2.1 AA and every answer executed on Ubuntu in CI",
     ],
     technologies: ["HTML5", "CSS3", "JavaScript", "PWA", "Service Worker", "Linux", "Bash", "Playwright", "Docker", "GitHub Actions", "Lighthouse CI"],
     link: "https://github.com/SaharHalili95/linux-master",
