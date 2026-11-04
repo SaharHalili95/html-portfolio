@@ -150,10 +150,10 @@ export const projectsData = [
     title: "CodeMate AI",
     subtitle: "RAG Code Assistant: Chat with Any Codebase",
     description:
-      "Upload a codebase and ask questions about it in a real-time chat that retrieves the relevant code as context. The React and TypeScript front end adds syntax highlighting, file upload and an analytics dashboard.",
+      "Upload a codebase and ask questions about it in a real-time chat that retrieves the relevant code as context. The React and TypeScript front end adds syntax highlighting, file upload and an analytics dashboard. The live demo runs entirely in your browser with your own OpenAI key, and the full FastAPI backend runs locally.",
     highlights: [
-      "End-to-end RAG pipeline: parsing, chunking, embeddings, vector search and generation",
-      "Swappable providers behind Embedder and ChatModel interfaces: OpenAI, Claude, or a demo mode that needs no API key, with no provider branches in the routes",
+      "End-to-end RAG pipeline: parsing, chunking, embeddings, vector search and generation, with streamed answers",
+      "Swappable providers behind Embedder and ChatModel interfaces: OpenAI, Claude, or a local demo mode that needs no API key, with no provider branches in the routes",
       "Thin FastAPI routes over a single RAG service, covered by pytest in CI",
     ],
     technologies: ["Python", "FastAPI", "OpenAI API", "Claude API", "ChromaDB", "RAG", "React", "TypeScript", "Tailwind CSS", "pytest"],
@@ -229,13 +229,13 @@ export const projectsData = [
     title: "NitaiBot",
     subtitle: "Telegram Bot That Writes Product Pages on the Claude API",
     description:
-      "A Telegram bot for eCommerce teams: send a product name or SKU and get back a complete Hebrew product page with specs and marketing highlights, in the style of leading Israeli retail chains, ready to paste into WordPress.",
+      "A Telegram bot and web interface for eCommerce teams: send a product name or SKU and get back a complete Hebrew product page with specs and marketing highlights, in the style of leading Israeli retail chains, ready to paste into WordPress.",
     highlights: [
-      "Generates full product pages in Hebrew with the Claude API",
-      "Outputs SEO-ready HTML formatted for WordPress",
-      "Deployed on a live server with Flask and Gunicorn",
+      "Claude's web search tool pulls current product data before writing, so specs are grounded, not guessed",
+      "Four sections on demand: short and full description, a technical spec table, and drawbacks with workarounds",
+      "WordPress-ready HTML, long answers split to fit Telegram's message limit, deployed with Flask and Gunicorn",
     ],
-    technologies: ["Python", "Claude API", "Anthropic SDK", "Telegram Bot API", "Flask", "Gunicorn"],
+    technologies: ["Python", "Claude API", "Anthropic SDK", "Telegram Bot API", "Flask", "Gunicorn", "pytest"],
     link: "https://github.com/SaharHalili95/nitai-bot",
   },
   {
@@ -280,19 +280,6 @@ export const projectsData = [
     technologies: ["React", "TypeScript", "Vite", "localStorage"],
     link: "https://github.com/SaharHalili95/budget-balance-game",
     demoLink: "https://saharhalili95.github.io/budget-balance-game/",
-  },
-  {
-    title: "Vet-Book",
-    subtitle: "Veterinary Clinic Management Prototype",
-    description:
-      "A full-stack prototype for running a veterinary clinic, with appointment booking for pets and a Streamlit dashboard for clinic staff.",
-    highlights: [
-      "Automated email and SMS reminders from a background scheduler",
-      "Medical records and weight history for every pet",
-      "Duplicate-booking detection when an appointment is created",
-    ],
-    technologies: ["Python", "FastAPI", "Pydantic", "Streamlit", "Docker"],
-    link: "https://github.com/SaharHalili95/Vet-Book",
   },
   {
     title: "Multiplayer Tic Tac Toe",
