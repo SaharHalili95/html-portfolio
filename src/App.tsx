@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Profile from "./components/Profile";
+import Hero from "./components/Hero";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Rambo from "./components/Rambo";
@@ -48,11 +49,12 @@ function Portfolio() {
       <div className="main-container">
         <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
         <main className="content">
-          <Profile />
+          <Hero />
+          <Projects />
+          <Services />
+          <Skills />
           <Experience />
           <Education />
-          <Skills />
-          <Projects />
           <Contact />
         </main>
       </div>
