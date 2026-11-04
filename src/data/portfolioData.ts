@@ -2,12 +2,46 @@ export const profileData = {
   name: "Sahar Halili",
   title: "Software Engineer | Full-Stack & AI",
   image: "/images/sh-portfolio.png",
-  summary:
-    "B.Sc. Computer Science graduate (HIT) who builds complete products end to end and ships them: a payroll and HR system on .NET 8 with Vue and Angular front ends, AI apps on the Claude API with RAG, and a Linux certification course that people study on their phones. Every project below is live, tested in CI on real browsers and devices, and built with care for security, accessibility and the details users notice. I work with AI coding tools every day, and as a teacher I'm used to explaining technical ideas clearly to anyone.",
+  headline: "I build software that works, and I ship it.",
+  intro:
+    "Full-stack developer (B.Sc. Computer Science, HIT) building business systems, web and mobile apps, and AI products, from the first idea to a live, tested release.",
+  availability: "Open to full-time roles and freelance projects",
+  cv: "/cv/Sahar_Halili_CV.pdf",
   social: {
     linkedin: "https://www.linkedin.com/in/sahar-halili",
     github: "https://github.com/SaharHalili95",
   },
+};
+
+export const servicesData = {
+  intro:
+    "Hiring for your team, or need something built? You get the same standard either way: clean code, automated tests, and a product that is live, not just a demo.",
+  items: [
+    {
+      icon: "fa-building",
+      title: "Business Systems",
+      description: "Internal tools, admin panels and HR or payroll systems with roles, permissions and reports.",
+      proof: "SalaryNet",
+    },
+    {
+      icon: "fa-mobile-screen",
+      title: "Web & Mobile Apps",
+      description: "Fast, responsive apps that work on any phone, in Hebrew and English with full right-to-left support.",
+      proof: "Linux Master",
+    },
+    {
+      icon: "fa-robot",
+      title: "AI Features",
+      description: "Chatbots, assistants and AI search over your own content, built on the Claude and OpenAI APIs.",
+      proof: "EasyMat",
+    },
+    {
+      icon: "fa-screwdriver-wrench",
+      title: "Maintenance & Support",
+      description: "Updates, fixes, automated tests and monitoring that keep your product running after launch.",
+      proof: "SalSmart",
+    },
+  ],
 };
 
 export const experienceData = [
@@ -57,6 +91,8 @@ export const skillsData = {
 export const projectsData = [
   {
     title: "SalaryNet",
+    featured: true,
+    image: "/images/projects/salarynet.webp",
     subtitle: "Payroll & HR System on .NET 8 with Vue 3 and Angular",
     description:
       "A complete payroll and HR system: employees, departments, monthly payroll, payslips and attendance. Payslips break down a documented progressive income-tax and social-security calculation, clock-in hours are calculated on the server, and a dashboard shows headcount and payroll cost. Admin, HR and Employee accounts each see only what their role allows, in English or Hebrew with a full right-to-left layout.",
@@ -77,6 +113,8 @@ export const projectsData = [
   },
   {
     title: "EasyMat",
+    featured: true,
+    image: "/images/projects/easymat.webp",
     subtitle: "AI Math Tutor for the Israeli Bagrut, on the Claude API",
     description:
       "An AI tutor for high school students preparing for the Bagrut math exam (3, 4 and 5 units). Students ask in Hebrew or English and get step-by-step answers grounded in Bagrut material, adapted to their level. A practice mode serves real Bagrut questions with the official answers, and a photo of a handwritten equation is enough to get it solved.",
@@ -92,6 +130,9 @@ export const projectsData = [
   },
   {
     title: "Linux Master",
+    featured: true,
+    image: "/images/projects/linuxmaster.webp",
+    imageKind: "phone",
     subtitle: "80-Unit Linux Course for LPIC-1, RHCSA and LFCS, in English and Hebrew",
     description:
       "A phone-first, game-style web app for learning Linux anywhere, anytime, in short lessons that fit a bus ride or a coffee break, from the first command all the way to certification. An 80-unit path in 10 parts covers every LPIC-1 v5.0 objective plus RHCSA and LFCS topics: text processing, permissions, disks and LVM, users and systemd, packages, networking and SSH, scripting, security, and three mock exams. Each unit has 4 short lessons, a chest and a terminal boss. The original trivia mode stays in the app for bonus practice. No server or account.",
@@ -121,6 +162,8 @@ export const projectsData = [
   },
   {
     title: "SalSmart",
+    featured: true,
+    image: "/images/projects/salsmart.webp",
     subtitle: "Grocery Price Comparison on Official Data, Deployed on Kubernetes",
     description:
       "Ingests the daily price files that Israeli supermarket chains are required to publish (1.6M prices per run), normalizes their different XML formats into PostgreSQL with change-only history, and lets shoppers compare a full basket across the stores in their city.",
@@ -135,6 +178,8 @@ export const projectsData = [
   },
   {
     title: "HardenGarden",
+    featured: true,
+    image: "/images/projects/hardengarden.webp",
     subtitle: "Linux Hardening Auditor with a Local LLM",
     description:
       "A desktop app and CLI that audits a Linux machine across SSH, firewall, listening services, file permissions, sudo, accounts, automatic updates and ASLR, then computes a deterministic health score. A local LLM explains each finding from cited sources, and every finding comes with a remediation script the user runs themselves: the app never changes the system. Released as .deb and AppImage packages, tested on Ubuntu 22.04, Ubuntu 24.04 and Debian 12.",
@@ -150,6 +195,8 @@ export const projectsData = [
   },
   {
     title: "NetSentinel",
+    featured: true,
+    image: "/images/projects/netsentinel.webp",
     subtitle: "Home Network Security Monitor with Live Alerts",
     description:
       "Shows what is connected to a home network and whether anything looks wrong: device discovery and port scanning with nmap, traffic sampling with GeoIP, and rules for suspicious ports, new devices, watchlist countries and traffic spikes, pushed live to a dashboard over WebSocket, plus daily SOC 2 style checks. The live demo is the real app in English and Hebrew.",
@@ -294,15 +341,17 @@ export const projectsData = [
 
 export const contactData = {
   phone: "050-574-1079",
+  whatsapp: "https://wa.me/972505741079",
   email: "sahar_halili@icloud.com",
   location: "Modiin-Maccabim-Reut",
 };
 
 export const navItems = [
-  { id: "profile", label: "Profile", icon: "fa-user" },
+  { id: "profile", label: "About", icon: "fa-user" },
+  { id: "projects", label: "Projects", icon: "fa-folder-open" },
+  { id: "services", label: "Work With Me", icon: "fa-handshake" },
+  { id: "skills", label: "Skills", icon: "fa-code" },
   { id: "experience", label: "Experience", icon: "fa-briefcase" },
   { id: "education", label: "Education", icon: "fa-graduation-cap" },
-  { id: "skills", label: "Skills", icon: "fa-code" },
-  { id: "projects", label: "Projects", icon: "fa-folder-open" },
   { id: "contact", label: "Contact", icon: "fa-envelope" },
 ];

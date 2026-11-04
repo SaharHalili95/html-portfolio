@@ -1,54 +1,58 @@
 import { motion } from "framer-motion";
 import Section from "./Section";
-import { contactData } from "../data/portfolioData";
+import { contactData, profileData } from "../data/portfolioData";
+import { getImagePath } from "../utils/paths";
+
+const items = [
+  { icon: "fas fa-envelope", label: contactData.email, href: `mailto:${contactData.email}` },
+  { icon: "fas fa-phone", label: contactData.phone, href: `tel:+972${contactData.phone.replace(/-/g, "").slice(1)}` },
+  { icon: "fab fa-whatsapp", label: "WhatsApp", href: contactData.whatsapp },
+  { icon: "fab fa-linkedin", label: "LinkedIn", href: profileData.social.linkedin },
+  { icon: "fab fa-github", label: "GitHub", href: profileData.social.github },
+  { icon: "fas fa-location-dot", label: contactData.location },
+];
 
 const Contact = () => {
   return (
-    <Section id="contact" title="Contact Information">
+    <Section id="contact" title="Let's Work Together">
+      <p className="contact-intro">
+        A role on your team or a project you need built: tell me what you need and I'll get back to you.
+      </p>
       <ul className="contact-info">
-        <motion.li
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-        >
-          <i className="fas fa-phone"></i> {contactData.phone}
-        </motion.li>
-        <motion.li
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-        >
-          <i className="fas fa-envelope"></i>{" "}
-          <a href={`mailto:${contactData.email}`}>{contactData.email}</a>
-        </motion.li>
-        <motion.li
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-        >
-          <i className="fas fa-map-marker-alt"></i> {contactData.location}
-        </motion.li>
+        {items.map((item, i) => (
+          <motion.li
+            key={item.label}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.05 }}
+          >
+            <i className={item.icon} aria-hidden="true"></i>
+            {item.href ? (
+              <a
+                href={item.href}
+                {...(item.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <span>{item.label}</span>
+            )}
+          </motion.li>
+        ))}
       </ul>
 
-      <motion.div
-        className="contact-form"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5 }}
-      >
-        <motion.a
-          href={`mailto:${contactData.email}`}
-          className="send-btn email-btn"
-          whileHover={{ scale: 1.05, boxShadow: "0 5px 20px rgba(0,122,204,0.4)" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Send Message
-        </motion.a>
-      </motion.div>
+      <div className="contact-actions">
+        <a href={`mailto:${contactData.email}`} className="btn btn-primary">
+          <i className="fas fa-envelope"></i> Send an Email
+        </a>
+        <a href={contactData.whatsapp} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+          <i className="fab fa-whatsapp"></i> Message on WhatsApp
+        </a>
+        <a href={getImagePath(profileData.cv)} className="btn btn-ghost" download>
+          <i className="fas fa-file-arrow-down"></i> Download CV
+        </a>
+      </div>
     </Section>
   );
 };

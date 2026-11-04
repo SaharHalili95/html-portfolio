@@ -26,7 +26,7 @@ const SkillCategory = ({
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ delay: delay + index * 0.05 }}
-        whileHover={{ scale: 1.1, backgroundColor: "#007acc", color: "#fff" }}
+        whileHover={{ scale: 1.1, backgroundColor: "#2563eb", color: "#fff" }}
       >
         {skill}
       </motion.span>
