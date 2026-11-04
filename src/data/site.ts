@@ -272,16 +272,16 @@ export const projects: Project[] = [
     },
     highlights: [
       {
+        en: "Pick your certification from the tab bar: LPIC-1 (71 units), RHCSA (56) or LFCS (49) shows only its units, and progress is kept in every track.",
+        he: "בוחרים הסמכה מסרגל הלשוניות: LPIC-1 (71 יחידות), RHCSA (56) או LFCS (49), ורואים רק את היחידות שלה. ההתקדמות נשמרת בכל מסלול.",
+      },
+      {
         en: "No invented output: answers run in a simulated shell or come from output recorded on real Ubuntu and AlmaLinux.",
         he: "בלי פלט מומצא: התשובות רצות במעטפת מדומה או מגיעות מפלט שהוקלט על Ubuntu ו-AlmaLinux אמיתיים.",
       },
       {
-        en: "An LPIC-1 mock exam with 60 questions weighted by objective, a 90-minute timer and a 500/800 pass mark.",
-        he: "מבחן דמה ל-LPIC-1 עם 60 שאלות לפי משקל היעדים, טיימר של 90 דקות וציון עובר 500 מתוך 800.",
-      },
-      {
-        en: "Playwright plays every unit on iPhone, iPhone SE and Pixel 7, with axe WCAG 2.1 AA in CI.",
-        he: "Playwright משחק כל יחידה על אייפון, iPhone SE ו-Pixel 7, עם בדיקות נגישות WCAG 2.1 AA ב-CI.",
+        en: "Three mock exams, LPIC-1 with 60 questions, a 90-minute timer and a 500/800 pass mark; Playwright plays every unit on three phones in CI.",
+        he: "שלושה מבחני דמה, ול-LPIC-1 יש 60 שאלות, טיימר של 90 דקות וציון עובר 500 מתוך 800; Playwright משחק כל יחידה על שלושה טלפונים ב-CI.",
       },
     ],
     technologies: ["JavaScript", "HTML5", "CSS3", "PWA", "Linux", "Bash", "Playwright", "Docker", "GitHub Actions", "Lighthouse CI"],
