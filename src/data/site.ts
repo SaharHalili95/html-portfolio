@@ -460,8 +460,8 @@ export const projects: Project[] = [
     title: "Reaction Speed Test",
     tagline: { en: "How fast are your reflexes?", he: "כמה מהירים הרפלקסים שלכם?" },
     summary: {
-      en: "Three reflex games with personal bests and charts of past results.",
-      he: "שלושה משחקי תגובה עם שיאים אישיים וגרפים של תוצאות קודמות.",
+      en: "Three reflex games, a multiplayer mode, a leaderboard and a training mode, with personal bests and charts of past results.",
+      he: "שלושה משחקי תגובה, מצב רב-משתתפים, לוח תוצאות ומצב אימון, עם שיאים אישיים וגרפים של תוצאות קודמות.",
     },
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     link: "https://github.com/SaharHalili95/reaction-speed-test",

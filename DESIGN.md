@@ -11,11 +11,6 @@ colors:
   button-hover: "#0077ed"
   status: "#1f8a3b"
   frame: "#1d1d1f"
-  dark-ground: "#000000"
-  dark-ground-alt: "#161617"
-  dark-ink: "#f5f5f7"
-  dark-ink-secondary: "#a1a1a6"
-  dark-link: "#2997ff"
 typography:
   display:
     fontFamily: "-apple-system, BlinkMacSystemFont, SF Pro Text, Segoe UI, Helvetica Neue, Arial, sans-serif"
@@ -93,7 +88,7 @@ It refuses the résumé template: no sidebar with a photo, no stacked white card
 
 ## Colors
 
-Restrained: white and a light gray band, near-black ink, and one blue that only ever means "act here" (buttons) or "go there" (links). Sections alternate between `ground` and `ground-alt` so chapters read as separate rooms without dividers. Secondary text is `ink-secondary`, never a lighter gray. Dark mode follows the system and swaps every token; nothing is hard-coded.
+Restrained: white and a light gray band, near-black ink, and one blue that only ever means "act here" (buttons) or "go there" (links). Sections alternate between `ground` and `ground-alt` so chapters read as separate rooms without dividers. Secondary text is `ink-secondary`, never a lighter gray. The site is always light, whatever the device setting: the owner found a black page too dark, and Apple product pages stay light too.
 
 ## Typography
 
