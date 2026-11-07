@@ -4,7 +4,7 @@ type Text = Record<Lang, string>;
 
 export const profile = {
   name: { en: "Sahar Halili", he: "סהר חלילי" } as Text,
-  title: { en: "Software Engineer · Full-Stack & AI", he: "מהנדס תוכנה · Full-Stack ו-AI" } as Text,
+  title: { en: "Freelance developer", he: "מפתח פרילנס" } as Text,
   photo: "/images/sh-portfolio.png",
   cv: "/cv/Sahar_Halili_CV.pdf",
   linkedin: "https://www.linkedin.com/in/sahar-halili",
@@ -26,10 +26,10 @@ export const ui = {
     talk: "Contact me",
     headline: "Hi, I'm Sahar",
     intro:
-      "I'm a full-stack developer with a CS degree from HIT. I've built a payroll system, an AI math tutor and a Linux course for your phone, and you can open all of them below.",
+      "I'm a freelance developer with a CS degree from HIT, and I also teach math and Python. I'm looking for my first full-time developer role. You can open my projects below.",
     primary: "Get in touch",
     cv: "Download CV",
-    availability: "Looking for a developer role, and open to freelance work",
+    availability: "Available for freelance projects",
     heroAlt: "SalaryNet dashboard on a desktop and Linux Master on a phone",
     workTitle: "Projects",
     workIntro: "You can try each of these and read its code.",
@@ -66,10 +66,10 @@ export const ui = {
     talk: "צרו קשר",
     headline: "היי, אני סהר",
     intro:
-      "אני מפתח Full-Stack, בוגר מדעי המחשב ב-HIT. בניתי בין השאר מערכת שכר, מורה AI למתמטיקה וקורס לינוקס לטלפון, ואפשר לפתוח את כולם כאן למטה.",
+      "אני מפתח פרילנס, בוגר מדעי המחשב ב-HIT, ומלמד גם מתמטיקה ו-Python. אני מחפש את המשרה המלאה הראשונה שלי בפיתוח. את הפרויקטים שלי אפשר לפתוח כאן למטה.",
     primary: "צרו קשר",
     cv: "להורדת קורות החיים",
-    availability: "מחפש משרת פיתוח, ופתוח גם לעבודה כפרילנסר",
+    availability: "פנוי לפרויקטים כפרילנסר",
     heroAlt: "לוח הבקרה של SalaryNet במחשב, ו-Linux Master בטלפון",
     workTitle: "פרויקטים",
     workIntro: "אפשר לנסות כל אחד מהם ולקרוא את הקוד שלו.",

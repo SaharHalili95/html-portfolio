@@ -36,7 +36,7 @@ Every project is live and opens in one tap, and the code backs every claim: test
 
 ## Brand Commitments
 
-- Name: Sahar Halili. Title: Software Engineer, Full-Stack and AI.
+- Name: Sahar Halili. He is a freelance developer and CS graduate with no full-time development job yet, looking for a first full-time role. The copy must never imply he has held one, and must not invent clients. The projects are the proof.
 - A small photo of Sahar next to his name. A new photo may come later.
 - Open to full-time roles and freelance projects, with full-time first.
 
