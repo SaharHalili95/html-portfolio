@@ -26,7 +26,7 @@ export const ui = {
     talk: "Contact me",
     headline: "Hi, I'm Sahar",
     intro:
-      "I'm a freelance developer with a CS degree from HIT, and I also teach math and Python. I'm looking for my first full-time developer role. You can open my projects below.",
+      "I'm a freelance developer with a CS degree from HIT, working on web apps, AI and cybersecurity. I also teach math and Python, and I'm looking for my first full-time role. You can open my projects below.",
     primary: "Get in touch",
     cv: "Download CV",
     availability: "Available for freelance projects",
@@ -66,7 +66,7 @@ export const ui = {
     talk: "צרו קשר",
     headline: "היי, אני סהר",
     intro:
-      "אני מפתח פרילנס, בוגר מדעי המחשב ב-HIT, ומלמד גם מתמטיקה ו-Python. אני מחפש את המשרה המלאה הראשונה שלי בפיתוח. את הפרויקטים שלי אפשר לפתוח כאן למטה.",
+      "אני מפתח פרילנס, בוגר מדעי המחשב ב-HIT, ועובד על אפליקציות ווב, AI ואבטחת מידע וסייבר. אני גם מלמד מתמטיקה ו-Python, ומחפש את המשרה המלאה הראשונה שלי. את הפרויקטים שלי אפשר לפתוח כאן למטה.",
     primary: "צרו קשר",
     cv: "להורדת קורות החיים",
     availability: "פנוי לפרויקטים כפרילנסר",
@@ -127,6 +127,14 @@ export const services: { title: Text; text: Text; proof: string }[] = [
     proof: "easymat",
   },
   {
+    title: { en: "Security and cyber", he: "אבטחה וסייבר" },
+    text: {
+      en: "Security checks for Linux machines and networks, and permissions and secure code in the products I build.",
+      he: "בדיקות אבטחה למחשבי לינוקס ולרשתות, והרשאות וקוד מאובטח במוצרים שאני בונה.",
+    },
+    proof: "hardengarden",
+  },
+  {
     title: { en: "Maintenance", he: "תחזוקה" },
     text: {
       en: "Updates, bug fixes, tests and monitoring for a product that's already live.",
@@ -179,6 +187,7 @@ export const skills: { label: Text; items: string[] }[] = [
   { label: { en: "Front end", he: "צד לקוח" }, items: ["React", "Next.js", "Vue 3", "Angular", "Tailwind CSS"] },
   { label: { en: "Back end and data", he: "צד שרת ונתונים" }, items: [".NET 8", "ASP.NET Core", "EF Core", "FastAPI", "Node.js", "REST APIs", "SQL Server", "PostgreSQL", "Redis", "MongoDB", "RabbitMQ"] },
   { label: { en: "AI", he: "AI" }, items: ["Claude API", "OpenAI API", "RAG", "Embeddings", "Pinecone", "ChromaDB", "Ollama", "Claude Code"] },
+  { label: { en: "Security", he: "אבטחה וסייבר" }, items: ["Linux hardening", "JWT and role-based access", "nmap", "Scapy", "CodeQL", "Trivy", "SBOM", "Sigstore", "STRIDE"] },
   { label: { en: "Delivery and quality", he: "העלאה ואיכות" }, items: ["Docker", "Kubernetes", "GitHub Actions", "Prometheus", "Grafana", "Playwright", "Vitest", "xUnit", "pytest", "Testcontainers"] },
   { label: { en: "Practices", he: "שיטות עבודה" }, items: ["Clean Architecture", "Automated testing", "CI/CD", "Code review", "Secure coding", "WCAG 2.1 AA", "RTL"] },
 ];
