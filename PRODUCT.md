@@ -53,3 +53,7 @@ Every project is live and opens in one tap, and the code backs every claim: test
 2. Every fact is checked against its project and the CVs.
 3. Phone first: the first screen on a phone must say who, what and how to reach him.
 4. One clear action: contact, for a role or a project.
+
+## Voice
+
+Write the way Sahar would say it to someone. Plain first-person sentences and concrete facts about what was built. No slogans, no staccato fragments, no "not just X" contrasts, no periods on headings, and no filler such as "end to end", "seamless" or "secure by default". Readers told the owner the earlier copy sounded AI-written.
