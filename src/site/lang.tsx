@@ -1,16 +1,16 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { ui, type Lang, type UI } from "../data/site";
 
-const STORAGE_KEY = "portfolio.lang";
+const STORAGE_KEY = "portfolio.lang.choice";
 
 function initialLang(): Lang {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "en" || saved === "he") return saved;
   } catch {
-    // Storage can be blocked; fall back to the browser language.
+    // Storage can be blocked; fall back to the default language.
   }
-  return navigator.language.toLowerCase().startsWith("he") ? "he" : "en";
+  return "en";
 }
 
 interface LangValue {
@@ -28,14 +28,17 @@ export function LangProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+  }, [lang]);
+
+  const toggle = useCallback(() => {
+    const next: Lang = lang === "en" ? "he" : "en";
+    setLang(next);
     try {
-      localStorage.setItem(STORAGE_KEY, lang);
+      localStorage.setItem(STORAGE_KEY, next);
     } catch {
       // Not saved; the choice still applies for this visit.
     }
   }, [lang]);
-
-  const toggle = useCallback(() => setLang((l) => (l === "en" ? "he" : "en")), []);
   const value = useMemo<LangValue>(
     () => ({ lang, t: ui[lang], pick: (text) => text[lang], toggle }),
     [lang, toggle],
