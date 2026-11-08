@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import Home from "./site/Home";
+import Home from "./site/Personal";
 import { LangProvider } from "./site/lang";
 import Rambo from "./components/Rambo";
 import PitbullProducts from "./components/PitbullProducts";
