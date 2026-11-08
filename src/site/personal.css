@@ -1,6 +1,6 @@
 .page {
   --ink: #181a1f;
-  --soft: #5b5f68;
+  --soft: #47574f;
   --security: #0a6f5f;
   --learning: #b0640b;
   --other: #465478;
@@ -16,7 +16,20 @@
 html:has(.page), body:has(.page) { background: #dcefe0 !important; scrollbar-color: #a9c8b1 #dcefe0; }
 .page ::selection { background: var(--ink); color: #fff; }
 
+/* The scrolling terrain behind everything */
+.field { position: fixed; inset: 0 0 auto; height: 100lvh; z-index: 0; overflow: hidden; pointer-events: none; }
+.field::before { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 60% at 22% 8%, #effaf1, transparent 72%); }
+.field i { position: absolute; inset: 0; opacity: 0; transition: opacity 700ms ease; }
+.field i.is-security { background: radial-gradient(85% 70% at 88% 18%, #a9e0ce, transparent 72%); }
+.field i.is-learning { background: radial-gradient(85% 70% at 90% 62%, #f7dfb2, transparent 72%); }
+.field i.is-other { background: radial-gradient(85% 70% at 10% 82%, #c6d3ee, transparent 72%); }
+.field[data-focus="security"] i.is-security, .field[data-focus="learning"] i.is-learning, .field[data-focus="other"] i.is-other { opacity: 1; }
+.field canvas { position: absolute; inset: 0; width: 100%; height: 100%; animation: field-in 900ms ease backwards; }
+@keyframes field-in { from { opacity: 0; } }
+
 .page .layout {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
   grid-template-areas: "intro map" "content map";
@@ -30,7 +43,7 @@ html:has(.page), body:has(.page) { background: #dcefe0 !important; scrollbar-col
 .page .content { grid-area: content; }
 .page .map { grid-area: map; position: sticky; top: 68px; align-self: start; height: min(660px, calc(100dvh - 96px)); }
 
-.page a { color: inherit; text-decoration: underline; text-decoration-color: #b9b5ab; text-underline-offset: 3px; transition: text-decoration-color 150ms ease, color 150ms ease; }
+.page a { color: inherit; text-decoration: underline; text-decoration-color: #86a693; text-underline-offset: 3px; transition: text-decoration-color 150ms ease, color 150ms ease; }
 .page a:active { opacity: .6; }
 .page a:focus-visible, .page button:focus-visible, .page summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 3px; }
 .page p { margin: 0 0 12px; text-wrap: pretty; }
@@ -173,7 +186,7 @@ html:has(.page), body:has(.page) { background: #dcefe0 !important; scrollbar-col
   .gnode span { font-size: .8125rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .page .in, .page .reveal, .graph .hub img, .graph .hub i, .gnode b, .gnode span { animation: none; }
+  .page .in, .page .reveal, .graph .hub img, .graph .hub i, .gnode b, .gnode span, .field canvas { animation: none; }
   .page details::details-content { transition: opacity 150ms ease; block-size: auto; }
   .page details:not([open])::details-content { block-size: 0; }
   .page details[open] .more img { animation: none; }

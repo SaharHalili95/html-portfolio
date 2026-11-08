@@ -5,6 +5,7 @@ import { education, experience, military, profile, projects, type Lang, type Pro
 import { getImagePath } from "../utils/paths";
 import { useLang } from "./lang";
 import ProjectGraph, { type GraphNode, type Group } from "./ProjectGraph";
+import ScrollField from "./ScrollField";
 import "./personal.css";
 
 const copy: Record<Lang, Record<string, string>> = {
@@ -186,6 +187,7 @@ export default function Personal() {
   const job = experience[0];
   return (
     <div className="page">
+      <ScrollField focus={scrolled ? focus : null} lang={lang} text={content} />
       <div className="bar" data-on={scrolled}>
         <div>
           <img src={getImagePath(profile.photo)} alt="" width="26" height="26" />
