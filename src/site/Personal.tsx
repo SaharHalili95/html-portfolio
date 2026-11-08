@@ -67,7 +67,7 @@ const CORE_TECH = ["C#", ".NET", "TypeScript", "React", "Python", "FastAPI", "SQ
 const PROOF: Record<string, Record<Lang, string>> = {
   hardengarden: { en: "It runs 12 checks and never changes the machine by itself. Releases are signed with Sigstore.", he: "הוא מריץ 12 בדיקות ולא משנה כלום במחשב בעצמו. הגרסאות חתומות ב-Sigstore." },
   netsentinel: { en: "Alerts reach the browser as they happen, and anything that changes state needs an API key.", he: "ההתראות מגיעות לדפדפן ברגע שהן קורות, וכל פעולה שמשנה מצב דורשת מפתח API." },
-  linuxmaster: { en: "It has 80 short units, 3 certification tracks and 3 mock exams, in English and Hebrew.", he: "יש בו 80 יחידות קצרות, 3 מסלולי הסמכה ו-3 מבחני דמה, בעברית ובאנגלית." },
+  linuxmaster: { en: "It has 93 short units, about 3,000 exercises, 6 certification tracks and 6 mock exams, in English and Hebrew.", he: "יש בו 93 יחידות קצרות, כ-3,000 תרגילים, 6 מסלולי הסמכה ו-6 מבחני דמה, בעברית ובאנגלית." },
   easymat: { en: "It has over 100 tests, and prompt caching cuts the model cost by about 90%.", he: "יש לו יותר מ-100 בדיקות, ו-prompt caching חוסך כ-90% מעלות המודל." },
   salarynet: { en: "It has 162 xUnit tests and two front ends, one in Vue 3 and one in Angular.", he: "יש לה 162 בדיקות xUnit ושני ממשקים, אחד ב-Vue 3 ואחד ב-Angular." },
   salsmart: { en: "It processes about 1.6 million prices per run, and CI deploys it to a test Kubernetes cluster.", he: "הוא מעבד כ-1.6 מיליון מחירים בכל הרצה, וה-CI מעלה אותו לאשכול Kubernetes לבדיקה." },
