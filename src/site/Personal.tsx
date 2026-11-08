@@ -23,6 +23,9 @@ const copy: Record<Lang, Record<string, string>> = {
     lang: "עברית",
     copy: "copy",
     copied: "copied",
+    open: "Open it",
+    now: "Present",
+    freelance: "Freelance software developer",
     graph: "Map of my main projects",
   },
   he: {
@@ -40,6 +43,9 @@ const copy: Record<Lang, Record<string, string>> = {
     lang: "English",
     copy: "העתקה",
     copied: "הועתק",
+    open: "לפתיחה",
+    now: "היום",
+    freelance: "מפתח תוכנה כפרילנסר",
     graph: "מפה של הפרויקטים המרכזיים שלי",
   },
 };
@@ -183,7 +189,7 @@ export default function Personal() {
         </div>
 
         <aside className="map">
-          <ProjectGraph nodes={nodes} active={active} focus={scrolled ? focus : null} onActive={setActive} label={c.graph} />
+          <ProjectGraph nodes={nodes} active={active} focus={scrolled ? focus : null} onActive={setActive} label={c.graph} open={c.open} code={c.code} tagline={(p) => pick(p.tagline)} />
         </aside>
 
         <div ref={content} className="content">
@@ -203,6 +209,8 @@ export default function Personal() {
           <section className="reveal">
             <h2>{c.background}</h2>
             <dl className="times">
+              <dt>{c.now}</dt>
+              <dd>{c.freelance}</dd>
               <dt>{pick(job.period)}</dt>
               <dd>{pick(job.role)}, {pick(job.place)}</dd>
               <dt dir="ltr">{education.period}</dt>

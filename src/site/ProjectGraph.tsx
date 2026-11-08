@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { profile, type Project } from "../data/site";
 import { getImagePath } from "../utils/paths";
 
@@ -23,9 +23,12 @@ interface Props {
   focus: Group | null;
   onActive: (id: string | null) => void;
   label: string;
+  open: string;
+  code: string;
+  tagline: (p: Project) => string;
 }
 
-export default function ProjectGraph({ nodes, active, focus, onActive, label }: Props) {
+export default function ProjectGraph({ nodes, active, focus, onActive, label, open, code, tagline }: Props) {
   const box = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const els = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -39,6 +42,7 @@ export default function ProjectGraph({ nodes, active, focus, onActive, label }: 
     const cv = canvas.current!;
     const ctx = cv.getContext("2d")!;
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const noHover = matchMedia("(hover: none)").matches;
     let w = 0;
     let h = 0;
     let raf = 0;
@@ -240,7 +244,13 @@ export default function ProjectGraph({ nodes, active, focus, onActive, label }: 
         b.bouncy = Math.hypot(b.vx, b.vy) > 60 || moved;
       };
       const click = (e: MouseEvent) => {
-        if (moved) e.preventDefault();
+        if (moved) {
+          e.preventDefault();
+        } else if (noHover) {
+          // Phones have no hover, so the first tap previews the project instead of leaving the page.
+          e.preventDefault();
+          onActive(state.current.active === nodes[i].project.id ? null : nodes[i].project.id);
+        }
       };
       el.addEventListener("pointerdown", down);
       el.addEventListener("pointermove", move);
@@ -277,11 +287,14 @@ export default function ProjectGraph({ nodes, active, focus, onActive, label }: 
       document.removeEventListener("visibilitychange", vis);
       cleanups.forEach((c) => c());
     };
-  }, [nodes]);
+  }, [nodes, onActive]);
 
   const shown = nodes.find((n) => n.project.id === active && n.project.image);
+  const [card, setCard] = useState<Project | null>(null);
+  if (shown && shown.project !== card) setCard(shown.project);
 
   return (
+    <>
     <div ref={box} className="graph" role="group" aria-label={label}>
       <canvas ref={canvas} aria-hidden="true" />
       <div className="hub" aria-hidden="true">
@@ -298,8 +311,8 @@ export default function ProjectGraph({ nodes, active, focus, onActive, label }: 
           draggable={false}
           onPointerEnter={(e) => { if (e.pointerType === "mouse") onActive(n.project.id); }}
           onPointerLeave={(e) => { if (e.pointerType === "mouse") onActive(null); }}
-          onFocus={() => onActive(n.project.id)}
-          onBlur={() => onActive(null)}
+          onFocus={(e) => { if (e.currentTarget.matches(":focus-visible")) onActive(n.project.id); }}
+          onBlur={(e) => { if (e.currentTarget.matches(":hover") || !matchMedia("(hover: none)").matches) onActive(null); }}
         >
           <b />
           <span>{n.project.title}</span>
@@ -311,5 +324,20 @@ export default function ProjectGraph({ nodes, active, focus, onActive, label }: 
         ))}
       </div>
     </div>
+    <div className="tapcard" data-on={!!shown}>
+      <div>
+        {card && (
+          <>
+            <img src={getImagePath(card.image!)} alt="" className={card.imageKind === "phone" ? "is-phone" : undefined} />
+            <p><strong>{card.title}</strong> · {tagline(card)}</p>
+            <p className="tapcard-links">
+              <a href={card.demoLink ?? card.link}>{open}</a>
+              {card.link && <a href={card.link} className="quiet">{code}</a>}
+            </p>
+          </>
+        )}
+      </div>
+    </div>
+    </>
   );
 }

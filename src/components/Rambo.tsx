@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getImagePath } from "../utils/paths";
