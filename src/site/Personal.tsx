@@ -9,8 +9,8 @@ import "./personal.css";
 
 const copy: Record<Lang, Record<string, string>> = {
   en: {
-    intro: "I'm a software developer. I build tools for security and for learning, teach math and Python at a high school in Modi'in, and take on freelance projects.",
-    looking: "I studied computer science at HIT, and I'm looking for my first full-time job as a developer.",
+    intro: "I write software, mostly for security and for learning. The security part comes from the C4I Corps, where I worked on networks and permissions and still do reserve duty. The learning part comes from teaching math and Python at a high school in Modi'in.",
+    looking: "I have a computer science degree from HIT. I take on freelance projects, and I'm looking for my first full-time job as a developer.",
     security: "Security",
     learning: "Learning",
     other: "Other projects",
@@ -32,8 +32,8 @@ const copy: Record<Lang, Record<string, string>> = {
     graph: "Map of my main projects",
   },
   he: {
-    intro: "אני מפתח תוכנה. אני בונה כלים לאבטחה וללמידה, מלמד מתמטיקה ו-Python בתיכון במודיעין, ועובד גם כפרילנסר.",
-    looking: "למדתי מדעי המחשב ב-HIT, ואני מחפש את המשרה המלאה הראשונה שלי כמפתח.",
+    intro: "אני כותב תוכנה, בעיקר לאבטחה וללמידה. האבטחה מגיעה מחיל התקשוב, שם עבדתי על רשתות והרשאות ואני ממשיך במילואים. הלמידה מגיעה מההוראה: אני מלמד מתמטיקה ו-Python בתיכון במודיעין.",
+    looking: "יש לי תואר במדעי המחשב מ-HIT. אני לוקח פרויקטים כפרילנסר ומחפש את המשרה המלאה הראשונה שלי כמפתח.",
     security: "אבטחה",
     learning: "למידה",
     other: "עוד פרויקטים",
@@ -64,12 +64,12 @@ const MAIN_OTHER = ["salarynet", "salsmart", "codemate", "meshmind", "nitaibot"]
 const CORE_TECH = ["C#", ".NET", "TypeScript", "React", "Python", "FastAPI", "SQL Server", "PostgreSQL", "Linux", "Docker", "Kubernetes", "Claude API", "RAG", "Playwright", "GitHub Actions"];
 
 const PROOF: Record<string, Record<Lang, string>> = {
-  hardengarden: { en: "12 checks, signed releases, fixes tested on 3 Linux versions", he: "12 בדיקות, גרסאות חתומות, תיקונים שנבדקו על 3 גרסאות לינוקס" },
-  netsentinel: { en: "Live alerts over WebSocket, no WCAG 2.1 AA issues in axe", he: "התראות חיות ב-WebSocket, axe לא מוצא בעיות WCAG 2.1 AA" },
-  linuxmaster: { en: "80 units, 3 certification tracks, 3 mock exams", he: "80 יחידות, 3 מסלולי הסמכה, 3 מבחני דמה" },
-  easymat: { en: "Over 100 tests, about 90% lower model cost with prompt caching", he: "יותר מ-100 בדיקות, חיסכון של כ-90% בעלות המודל עם prompt caching" },
-  salarynet: { en: "162 xUnit tests, Vue 3 and Angular front ends", he: "162 בדיקות xUnit, ממשקי Vue 3 ו-Angular" },
-  salsmart: { en: "1.6 million prices per run, deployed to Kubernetes in CI", he: "1.6 מיליון מחירים בכל הרצה, פריסה ל-Kubernetes ב-CI" },
+  hardengarden: { en: "It runs 12 checks and never changes the machine by itself. Releases are signed with Sigstore.", he: "הוא מריץ 12 בדיקות ולא משנה כלום במחשב בעצמו. הגרסאות חתומות ב-Sigstore." },
+  netsentinel: { en: "Alerts reach the browser as they happen, and anything that changes state needs an API key.", he: "ההתראות מגיעות לדפדפן ברגע שהן קורות, וכל פעולה שמשנה מצב דורשת מפתח API." },
+  linuxmaster: { en: "It has 80 short units, 3 certification tracks and 3 mock exams, in English and Hebrew.", he: "יש בו 80 יחידות קצרות, 3 מסלולי הסמכה ו-3 מבחני דמה, בעברית ובאנגלית." },
+  easymat: { en: "It has over 100 tests, and prompt caching cuts the model cost by about 90%.", he: "יש לו יותר מ-100 בדיקות, ו-prompt caching חוסך כ-90% מעלות המודל." },
+  salarynet: { en: "It has 162 xUnit tests and two front ends, one in Vue 3 and one in Angular.", he: "יש לה 162 בדיקות xUnit ושני ממשקים, אחד ב-Vue 3 ואחד ב-Angular." },
+  salsmart: { en: "It processes about 1.6 million prices per run, and CI deploys it to a test Kubernetes cluster.", he: "הוא מעבד כ-1.6 מיליון מחירים בכל הרצה, וה-CI מעלה אותו לאשכול Kubernetes לבדיקה." },
 };
 
 const LAYOUT: [string, Group, number, number][] = [

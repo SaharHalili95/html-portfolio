@@ -222,7 +222,7 @@ export const projects: Project[] = [
     title: "HardenGarden",
     featured: true,
     image: "/images/projects/hardengarden.webp",
-    tagline: { en: "A security check for Linux machines", he: "בדיקת אבטחה למחשבי לינוקס" },
+    tagline: { en: "Checks a Linux machine and tells you what to fix", he: "בודק מחשב לינוקס ואומר מה כדאי לתקן" },
     summary: {
       en: "A desktop app and CLI that checks SSH, the firewall, services, permissions, sudo, accounts, updates and ASLR, then gives the machine a score. It doesn't change anything on its own. A local LLM explains each finding and cites its sources, and each fix is a script you run yourself.",
       he: "אפליקציה ו-CLI שבודקים SSH, חומת אש, שירותים, הרשאות, sudo, חשבונות, עדכונים ו-ASLR, ונותנים למחשב ציון. הכלי לא משנה כלום בעצמו. מודל שפה מקומי מסביר כל ממצא ומפנה למקורות, וכל תיקון הוא סקריפט שמריצים לבד.",
@@ -250,7 +250,7 @@ export const projects: Project[] = [
     title: "NetSentinel",
     featured: true,
     image: "/images/projects/netsentinel.webp",
-    tagline: { en: "A security monitor for home networks", he: "ניטור אבטחה לרשת הביתית" },
+    tagline: { en: "Shows who's on your home network and warns you when something looks wrong", he: "מראה מי מחובר לרשת הביתית ומתריע כשמשהו נראה חשוד" },
     summary: {
       en: "Finds the devices on your network, scans their ports and samples traffic. It raises an alert for suspicious ports, new devices, watchlist countries and traffic spikes, and the dashboard updates live. The demo is the real app, in English and Hebrew.",
       he: "מוצא את המכשירים ברשת, סורק את הפורטים שלהם ודוגם תעבורה. הוא מתריע על פורטים חשודים, מכשירים חדשים, מדינות ברשימת מעקב וקפיצות בתעבורה, ולוח הבקרה מתעדכן בזמן אמת. הדמו הוא האפליקציה האמיתית, בעברית ובאנגלית.",
@@ -279,7 +279,7 @@ export const projects: Project[] = [
     featured: true,
     image: "/images/projects/linuxmaster.webp",
     imageKind: "phone",
-    tagline: { en: "A Linux course for your phone", he: "קורס לינוקס לטלפון" },
+    tagline: { en: "Study for a Linux certification on your phone", he: "להתכונן להסמכת לינוקס מהטלפון" },
     summary: {
       en: "The idea is to study for a Linux certification from your phone, whenever you have a few minutes. 80 short units in 10 parts cover every LPIC-1 objective plus RHCSA and LFCS topics, in English and Hebrew. It ends with three mock exams, and the original trivia game is still there for extra practice.",
       he: "הרעיון הוא להתכונן להסמכת לינוקס מהטלפון, בכל פעם שיש כמה דקות פנויות. 80 יחידות קצרות ב-10 חלקים מכסות את כל יעדי LPIC-1 ונושאים מ-RHCSA ו-LFCS, בעברית ובאנגלית. בסוף יש שלושה מבחני דמה, ומשחק הטריוויה המקורי נשאר לתרגול נוסף.",
@@ -307,7 +307,7 @@ export const projects: Project[] = [
     title: "EasyMat",
     featured: true,
     image: "/images/projects/easymat.webp",
-    tagline: { en: "An AI math tutor for the Bagrut", he: "מורה AI למתמטיקה לבגרות" },
+    tagline: { en: "Ask a Bagrut math question and get the solution step by step", he: "שואלים שאלה במתמטיקה לבגרות ומקבלים פתרון שלב אחר שלב" },
     summary: {
       en: "Students preparing for the Bagrut (3, 4 or 5 units) ask a question in Hebrew or English and get a step-by-step answer based on Bagrut material. There's a practice mode with real exam questions, and you can photograph a handwritten equation to get it solved.",
       he: "תלמידים שמתכוננים לבגרות (3, 4 או 5 יחידות) שואלים בעברית או באנגלית ומקבלים פתרון שלב אחר שלב, לפי חומר הבגרות. יש מצב תרגול עם שאלות אמיתיות ממבחנים, ואפשר לצלם משוואה בכתב יד ולקבל את הפתרון.",
@@ -335,7 +335,7 @@ export const projects: Project[] = [
     title: "SalaryNet",
     featured: true,
     image: "/images/projects/salarynet.webp",
-    tagline: { en: "A payroll and HR system", he: "מערכת שכר ומשאבי אנוש" },
+    tagline: { en: "Payroll, attendance and payslips, where each role sees only its own part", he: "שכר, נוכחות ותלושים, וכל תפקיד רואה רק את מה שמותר לו" },
     summary: {
       en: "Handles employees, departments, attendance, monthly payroll and payslips. The API is in .NET 8 and there are two front ends, Vue 3 and Angular, both in English and Hebrew. Admins, HR and employees each see only what their role allows.",
       he: "מנהלת עובדים, מחלקות, נוכחות, שכר חודשי ותלושים. ה-API כתוב ב-.NET 8 ויש שני ממשקים, Vue 3 ו-Angular, שניהם בעברית ובאנגלית. מנהל, משאבי אנוש ועובד רואים רק מה שמותר להם.",
@@ -366,7 +366,7 @@ export const projects: Project[] = [
     title: "SalSmart",
     featured: true,
     image: "/images/projects/salsmart.webp",
-    tagline: { en: "Grocery price comparison for Israeli chains", he: "השוואת מחירי סופר בין הרשתות" },
+    tagline: { en: "Compares a full grocery basket across Israeli supermarkets", he: "משווה סל קניות שלם בין רשתות השיווק" },
     summary: {
       en: "Israeli supermarket chains have to publish their prices every day. SalSmart takes those files, about 1.6 million prices per run, converts their different XML formats into PostgreSQL, and lets you compare a full basket across the stores in your city.",
       he: "רשתות השיווק בישראל חייבות לפרסם את המחירים שלהן כל יום. SalSmart לוקח את הקבצים האלה, כ-1.6 מיליון מחירים בכל הרצה, ממיר את פורמטי ה-XML השונים ל-PostgreSQL, ומאפשר להשוות סל קניות שלם בין החנויות בעיר שלכם.",
@@ -392,7 +392,7 @@ export const projects: Project[] = [
   {
     id: "codemate",
     title: "CodeMate AI",
-    tagline: { en: "Ask questions about a codebase", he: "שאלות על בסיס קוד, בצ'אט" },
+    tagline: { en: "Upload a codebase and ask it questions", he: "מעלים קוד ושואלים עליו שאלות" },
     summary: {
       en: "Upload a codebase and ask about it in a chat that retrieves the relevant code as context. It works with OpenAI or Claude, and the demo runs in your browser with your own OpenAI key.",
       he: "מעלים בסיס קוד ושואלים עליו בצ'אט ששולף את הקוד הרלוונטי כהקשר. זה עובד עם OpenAI או Claude, והדמו רץ בדפדפן עם מפתח OpenAI שלכם.",
@@ -404,7 +404,7 @@ export const projects: Project[] = [
   {
     id: "meshmind",
     title: "MeshMind AI",
-    tagline: { en: "Network routing with reinforcement learning", he: "ניתוב רשת עם למידת חיזוק" },
+    tagline: { en: "An agent that learns to route network traffic", he: "סוכן שלומד לנתב תעבורת רשת" },
     summary: {
       en: "A Q-learning agent routes traffic across a simulated 12-node backbone, benchmarked against shortest-path and congestion-aware routing over 10 seeds, with a live in-browser simulator.",
       he: "סוכן Q-learning מנתב תעבורה ברשת שדרה מדומה של 12 צמתים, מושווה לניתוב לפי מסלול קצר ולפי עומס על פני 10 הרצות, עם סימולטור חי בדפדפן.",
@@ -416,7 +416,7 @@ export const projects: Project[] = [
   {
     id: "nitaibot",
     title: "NitaiBot",
-    tagline: { en: "A bot that writes product pages", he: "בוט שכותב דפי מוצר" },
+    tagline: { en: "Send a product name and get a full product page in Hebrew", he: "שולחים שם מוצר ומקבלים דף מוצר מלא בעברית" },
     summary: {
       en: "A Telegram bot with a web interface. Send a product name or SKU and it writes a full Hebrew product page for WordPress, using Claude's web search.",
       he: "בוט טלגרם עם ממשק ווב. שולחים שם מוצר או מק\"ט, והוא כותב דף מוצר מלא בעברית ל-WordPress, בעזרת חיפוש הרשת של Claude.",
