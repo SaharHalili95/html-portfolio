@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import "@fontsource-variable/frank-ruhl-libre/index.css";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { education, experience, military, profile, projects, skills, type Lang, type Project } from "../data/site";
 import { getImagePath } from "../utils/paths";
 import { useLang } from "./lang";
-import NetworkField from "./NetworkField";
+import ProjectGraph, { type GraphNode, type Group } from "./ProjectGraph";
 import "./personal.css";
 
 const copy: Record<Lang, Record<string, string>> = {
@@ -22,6 +23,7 @@ const copy: Record<Lang, Record<string, string>> = {
     lang: "עברית",
     copy: "copy",
     copied: "copied",
+    graph: "Map of my main projects",
   },
   he: {
     intro: "אני מפתח תוכנה. אני בונה כלים לאבטחה וללמידה, מלמד מתמטיקה ו-Python בתיכון במודיעין, ועובד גם כפרילנסר.",
@@ -38,6 +40,7 @@ const copy: Record<Lang, Record<string, string>> = {
     lang: "English",
     copy: "העתקה",
     copied: "הועתק",
+    graph: "מפה של הפרויקטים המרכזיים שלי",
   },
 };
 
@@ -45,69 +48,54 @@ const SECURITY = ["hardengarden", "netsentinel"];
 const LEARNING = ["linuxmaster", "easymat"];
 const byId = (ids: string[]) => ids.map((id) => projects.find((p) => p.id === id)!);
 
-// Follows the pointer on two independent critically damped springs, from wherever it currently is.
-function useFloatingPreview() {
-  const el = useRef<HTMLDivElement>(null);
-  const [src, setSrc] = useState<string | null>(null);
-  const motion = useRef({ x: 0, y: 0, vx: 0, vy: 0, tx: 0, ty: 0, raf: 0, last: 0, shown: false });
+const LAYOUT: [string, Group, number, number][] = [
+  ["hardengarden", "security", 0.74, 0.16],
+  ["netsentinel", "security", 0.88, 0.46],
+  ["linuxmaster", "learning", 0.25, 0.17],
+  ["easymat", "learning", 0.12, 0.5],
+  ["salarynet", "other", 0.28, 0.84],
+  ["salsmart", "other", 0.74, 0.84],
+];
 
-  useEffect(() => {
-    const m = motion.current;
-    if (!matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-    const W = 320;
-    const H = 204;
-    const place = (e: PointerEvent) => {
-      const rtl = document.documentElement.dir === "rtl";
-      const main = document.querySelector(".page main")!.getBoundingClientRect();
-      const gutter = rtl ? main.left : innerWidth - main.right;
-      // Beside the column when there is room, so it never covers the text being read.
-      if (gutter >= W + 24) {
-        const drift = (e.clientX - innerWidth / 2) * 0.02;
-        m.tx = (rtl ? main.left - W - 8 : main.right + 8) + drift;
-      } else {
-        m.tx = Math.min(Math.max(e.clientX - W / 2, 12), innerWidth - W - 12);
-      }
-      const below = gutter >= W + 24 ? e.clientY - H / 2 : e.clientY + 28;
-      m.ty = Math.min(Math.max(below, 60), innerHeight - H - 12);
-    };
-    const tick = (now: number) => {
-      const dt = Math.min((now - m.last) / 1000, 0.05);
-      m.last = now;
-      const omega = 20;
-      m.vx += (omega * omega * (m.tx - m.x) - 2 * omega * m.vx) * dt;
-      m.vy += (omega * omega * (m.ty - m.y) - 2 * omega * m.vy) * dt;
-      m.x += m.vx * dt;
-      m.y += m.vy * dt;
-      if (el.current) el.current.style.translate = `${m.x}px ${m.y}px`;
-      m.raf = requestAnimationFrame(tick);
-    };
-    const over = (e: PointerEvent) => {
-      const row = (e.target as Element).closest?.("[data-preview]") as HTMLElement | null;
-      place(e);
-      if (row) {
-        if (!m.shown) {
-          m.x = m.tx;
-          m.y = m.ty;
-          m.vx = m.vy = 0;
-          m.shown = true;
-          m.last = performance.now();
-          m.raf = requestAnimationFrame(tick);
-        }
-        setSrc(row.dataset.preview!);
-      } else if (m.shown) {
-        m.shown = false;
-        cancelAnimationFrame(m.raf);
-        setSrc(null);
-      }
-    };
-    window.addEventListener("pointermove", over, { passive: true });
-    return () => {
-      window.removeEventListener("pointermove", over);
-      cancelAnimationFrame(m.raf);
-    };
-  }, []);
-
-  return { el, src };
+function Row({ p, c, pick, onActive }: { p: Project; c: Record<string, string>; pick: (t: Record<Lang, string>) => string; onActive: (id: string | null) => void }) {
+  const href = p.demoLink ?? (p.internalLink ? `#${p.internalLink}` : p.link);
+  const image = p.image ? getImagePath(p.image) : undefined;
+  return (
+    <li
+      className="row"
+      onPointerEnter={(e) => { if (e.pointerType === "mouse") onActive(p.id); }}
+      onPointerLeave={(e) => { if (e.pointerType === "mouse") onActive(null); }}
+    >
+      <p>
+        <a href={href} className="name">{p.title}</a>
+        <span className="sep"> · </span>
+        {pick(p.tagline)}
+        {p.link && (
+          <>
+            <span className="sep"> · </span>
+            <a href={p.link} className="quiet">{c.code}</a>
+          </>
+        )}
+      </p>
+      {p.highlights && (
+        <details>
+          <summary>
+            <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" /></svg>
+            {c.details}
+          </summary>
+          <div className="more">
+            {image && <img src={image} alt="" loading="lazy" className={p.imageKind === "phone" ? "is-phone" : undefined} />}
+            <p>{pick(p.summary)}</p>
+            <ul>
+              {p.highlights.map((h) => (
+                <li key={h.en}>{pick(h)}</li>
+              ))}
+            </ul>
+          </div>
+        </details>
+      )}
+    </li>
+  );
 }
 
 function CopyEmail({ idle, done }: { idle: string; done: string }) {
@@ -136,15 +124,35 @@ export default function Personal() {
   const { lang, pick, toggle } = useLang();
   const c = copy[lang];
   const other = projects.filter((p) => !SECURITY.includes(p.id) && !LEARNING.includes(p.id));
-  const { el, src } = useFloatingPreview();
+  const [active, setActive] = useState<string | null>(null);
+  const [focus, setFocus] = useState<Group | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  const head = useRef<HTMLElement>(null);
-  const [lastSrc, setLastSrc] = useState<string | null>(null);
-  if (src && src !== lastSrc) setLastSrc(src);
+  const head = useRef<HTMLDivElement>(null);
+  const content = useRef<HTMLDivElement>(null);
+  const nodes = useMemo<GraphNode[]>(
+    () => LAYOUT.map(([id, group, x, y]) => ({ project: projects.find((p) => p.id === id)!, group, x, y })),
+    [],
+  );
 
   useEffect(() => {
     const io = new IntersectionObserver(([e]) => setScrolled(!e.isIntersecting));
     if (head.current) io.observe(head.current);
+    return () => io.disconnect();
+  }, []);
+
+  // The section in the middle of the screen lights up its part of the map.
+  useEffect(() => {
+    const sections = content.current!.querySelectorAll<HTMLElement>("[data-group]");
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) setFocus(e.target.getAttribute("data-group") as Group);
+          else if (e.target.getAttribute("data-group") !== null) setFocus((f) => (f === e.target.getAttribute("data-group") ? null : f));
+        }
+      },
+      { rootMargin: "-45% 0px -45% 0px" },
+    );
+    sections.forEach((s) => io.observe(s));
     return () => io.disconnect();
   }, []);
 
@@ -156,47 +164,9 @@ export default function Personal() {
     }
   };
 
-  const Row = ({ p, index }: { p: Project; index: number }) => {
-    const href = p.demoLink ?? (p.internalLink ? `#${p.internalLink}` : p.link);
-    const image = p.image ? getImagePath(p.image) : undefined;
-    return (
-      <li className="row" style={{ "--i": index } as React.CSSProperties} data-preview={image}>
-        <p>
-          <a href={href} className="name">{p.title}</a>
-          <span className="sep"> · </span>
-          {pick(p.tagline)}
-          {p.link && (
-            <>
-              <span className="sep"> · </span>
-              <a href={p.link} className="quiet">{c.code}</a>
-            </>
-          )}
-        </p>
-        {p.highlights && (
-          <details>
-            <summary>
-              <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" /></svg>
-              {c.details}
-            </summary>
-            <div className="more">
-              {image && <img src={image} alt="" loading="lazy" className={p.imageKind === "phone" ? "is-phone" : undefined} />}
-              <p>{pick(p.summary)}</p>
-              <ul>
-                {p.highlights.map((h) => (
-                  <li key={h.en}>{pick(h)}</li>
-                ))}
-              </ul>
-            </div>
-          </details>
-        )}
-      </li>
-    );
-  };
-
   const job = experience[0];
   return (
     <div className="page">
-      <NetworkField />
       <div className="bar" data-on={scrolled}>
         <div>
           <img src={getImagePath(profile.photo)} alt="" width="26" height="26" />
@@ -205,63 +175,65 @@ export default function Personal() {
         </div>
       </div>
       <button className="lang quiet" onClick={switchLang}>{c.lang}</button>
-      <main>
-        <header ref={head} className="in" style={{ "--d": 0 } as React.CSSProperties}>
-          <img src={getImagePath(profile.photo)} alt="" width="72" height="72" />
-          <h1>{pick(profile.name)}</h1>
-        </header>
-        <p className="in" style={{ "--d": 1 } as React.CSSProperties}>{c.intro}</p>
-        <p className="in" style={{ "--d": 2 } as React.CSSProperties}>{c.looking}</p>
+      <main className="layout">
+        <div ref={head} className="intro">
+          <h1 className="in" style={{ "--d": 0 } as React.CSSProperties}>{pick(profile.name)}</h1>
+          <p className="lead in" style={{ "--d": 1 } as React.CSSProperties}>{c.intro}</p>
+          <p className="in" style={{ "--d": 2 } as React.CSSProperties}>{c.looking}</p>
+        </div>
 
-        <section className="in" style={{ "--d": 3 } as React.CSSProperties}>
-          <h2>{c.security}</h2>
-          <ul className="rows">{byId(SECURITY).map((p, i) => <Row key={p.id} p={p} index={i} />)}</ul>
-        </section>
-        <section className="in" style={{ "--d": 4 } as React.CSSProperties}>
-          <h2>{c.learning}</h2>
-          <ul className="rows">{byId(LEARNING).map((p, i) => <Row key={p.id} p={p} index={i} />)}</ul>
-        </section>
-        <section className="reveal">
-          <h2>{c.other}</h2>
-          <ul className="rows">{other.map((p, i) => <Row key={p.id} p={p} index={i} />)}</ul>
-        </section>
+        <aside className="map">
+          <ProjectGraph nodes={nodes} active={active} focus={scrolled ? focus : null} onActive={setActive} label={c.graph} />
+        </aside>
 
-        <section className="reveal">
-          <h2>{c.background}</h2>
-          <dl className="times">
-            <dt>{pick(job.period)}</dt>
-            <dd>{pick(job.role)}, {pick(job.place)}</dd>
-            <dt dir="ltr">{education.period}</dt>
-            <dd>{pick(education.degree)}, {pick(education.school)}</dd>
-            <dt>{pick(military.reservePeriod)}</dt>
-            <dd>{pick(military.org)}: {pick(military.reserve)}</dd>
-            <dt dir="ltr">{military.period}</dt>
-            <dd>{pick(military.org)}: {pick(military.points[0])}</dd>
-          </dl>
-        </section>
+        <div ref={content} className="content">
+          <section className="in" style={{ "--d": 3 } as React.CSSProperties} data-group="security">
+            <h2 className="is-security">{c.security}</h2>
+            <ul className="rows">{byId(SECURITY).map((p) => <Row key={p.id} p={p} c={c} pick={pick} onActive={setActive} />)}</ul>
+          </section>
+          <section className="in" style={{ "--d": 4 } as React.CSSProperties} data-group="learning">
+            <h2 className="is-learning">{c.learning}</h2>
+            <ul className="rows">{byId(LEARNING).map((p) => <Row key={p.id} p={p} c={c} pick={pick} onActive={setActive} />)}</ul>
+          </section>
+          <section className="reveal" data-group="other">
+            <h2 className="is-other">{c.other}</h2>
+            <ul className="rows">{other.map((p) => <Row key={p.id} p={p} c={c} pick={pick} onActive={setActive} />)}</ul>
+          </section>
 
-        <section className="reveal">
-          <h2>{c.tech}</h2>
-          <p dir="ltr" className="tech">{skills.flatMap((g) => g.items).join(", ")}</p>
-        </section>
+          <section className="reveal">
+            <h2>{c.background}</h2>
+            <dl className="times">
+              <dt>{pick(job.period)}</dt>
+              <dd>{pick(job.role)}, {pick(job.place)}</dd>
+              <dt dir="ltr">{education.period}</dt>
+              <dd>{pick(education.degree)}, {pick(education.school)}</dd>
+              <dt>{pick(military.reservePeriod)}</dt>
+              <dd>{pick(military.org)}: {pick(military.reserve)}</dd>
+              <dt dir="ltr">{military.period}</dt>
+              <dd>{pick(military.org)}: {pick(military.points[0])}</dd>
+            </dl>
+          </section>
 
-        <section className="reveal">
-          <h2>{c.contact}</h2>
-          <p className="links">
-            <span className="mail">
-              <a href={`mailto:${profile.email}`} dir="ltr">{profile.email}</a>
-              <CopyEmail idle={c.copy} done={c.copied} />
-            </span>
-            <a href={profile.whatsapp}>WhatsApp</a>
-            <a href={profile.linkedin}>LinkedIn</a>
-            <a href={profile.github}>GitHub</a>
-            <a href={getImagePath(profile.cv)} download>{c.cv}</a>
-          </p>
-        </section>
+          <section className="reveal">
+            <h2>{c.tech}</h2>
+            <p dir="ltr" className="tech">{skills.flatMap((g) => g.items).join(", ")}</p>
+          </section>
+
+          <section className="reveal">
+            <h2>{c.contact}</h2>
+            <p className="links">
+              <span className="mail">
+                <a href={`mailto:${profile.email}`} dir="ltr">{profile.email}</a>
+                <CopyEmail idle={c.copy} done={c.copied} />
+              </span>
+              <a href={profile.whatsapp}>WhatsApp</a>
+              <a href={profile.linkedin}>LinkedIn</a>
+              <a href={profile.github}>GitHub</a>
+              <a href={getImagePath(profile.cv)} download>{c.cv}</a>
+            </p>
+          </section>
+        </div>
       </main>
-      <div ref={el} className="float" data-on={!!src} aria-hidden="true">
-        {lastSrc && <img src={lastSrc} alt="" />}
-      </div>
     </div>
   );
 }
