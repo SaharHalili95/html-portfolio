@@ -281,21 +281,21 @@ export const projects: Project[] = [
     imageKind: "phone",
     tagline: { en: "Study for a Linux certification on your phone", he: "להתכונן להסמכת לינוקס מהטלפון" },
     summary: {
-      en: "The idea is to study for a Linux certification from your phone, whenever you have a few minutes. 80 short units in 10 parts cover every LPIC-1 objective plus RHCSA and LFCS topics, in English and Hebrew. It ends with three mock exams, and the original trivia game is still there for extra practice.",
-      he: "הרעיון הוא להתכונן להסמכת לינוקס מהטלפון, בכל פעם שיש כמה דקות פנויות. 80 יחידות קצרות ב-10 חלקים מכסות את כל יעדי LPIC-1 ונושאים מ-RHCSA ו-LFCS, בעברית ובאנגלית. בסוף יש שלושה מבחני דמה, ומשחק הטריוויה המקורי נשאר לתרגול נוסף.",
+      en: "The idea is to study for a Linux certification from your phone, whenever you have a few minutes. 93 short units in 10 parts cover every LPIC-1 objective plus topics from RHCSA, LFCS, Linux Essentials, SUSE SCA and CompTIA Linux+, in English and Hebrew. It ends with six mock exams, and the original trivia game is still there for extra practice.",
+      he: "הרעיון הוא להתכונן להסמכת לינוקס מהטלפון, בכל פעם שיש כמה דקות פנויות. 93 יחידות קצרות ב-10 חלקים מכסות את כל יעדי LPIC-1 ונושאים מ-RHCSA, LFCS, Linux Essentials, SUSE SCA ו-CompTIA Linux+, בעברית ובאנגלית. בסוף יש שישה מבחני דמה, ומשחק הטריוויה המקורי נשאר לתרגול נוסף.",
     },
     highlights: [
       {
-        en: "Choose LPIC-1 (71 units), RHCSA (56) or LFCS (49) and you see only that track's units. Progress is saved for each track.",
-        he: "בוחרים LPIC-1 (71 יחידות), RHCSA (56) או LFCS (49) ורואים רק את היחידות של אותו מסלול. ההתקדמות נשמרת לכל מסלול.",
+        en: "Choose LPIC-1 (71 units), RHCSA (56), LFCS (49), Linux Essentials (47), SUSE SCA (43) or CompTIA Linux+ (76) and you see only that track's units. Progress is saved for each track.",
+        he: "בוחרים LPIC-1 (71 יחידות), RHCSA (56), LFCS (49), Linux Essentials (47), SUSE SCA (43) או CompTIA Linux+ (76) ורואים רק את היחידות של אותו מסלול. ההתקדמות נשמרת לכל מסלול.",
       },
       {
-        en: "Answers run in a simulated shell or come from output recorded on real Ubuntu and AlmaLinux machines.",
-        he: "התשובות רצות במעטפת מדומה או מגיעות מפלט שהוקלט על מכונות Ubuntu ו-AlmaLinux אמיתיות.",
+        en: "Answers run in a simulated shell or come from output recorded on real Ubuntu, AlmaLinux and openSUSE machines.",
+        he: "התשובות רצות במעטפת מדומה או מגיעות מפלט שהוקלט על מכונות Ubuntu, AlmaLinux ו-openSUSE אמיתיות.",
       },
       {
-        en: "The LPIC-1 mock exam has 60 questions, a 90-minute timer and a 500/800 pass mark. In CI, Playwright plays every unit on three phones.",
-        he: "במבחן הדמה של LPIC-1 יש 60 שאלות, טיימר של 90 דקות וציון עובר 500 מתוך 800. ב-CI, Playwright משחק כל יחידה על שלושה טלפונים.",
+        en: "The LPIC-1 mock exam has 60 questions, a 90-minute timer and a 500/800 pass mark. In CI, Playwright plays the whole course from start to finish.",
+        he: "במבחן הדמה של LPIC-1 יש 60 שאלות, טיימר של 90 דקות וציון עובר 500 מתוך 800. ב-CI, Playwright משחק את כל הקורס מההתחלה ועד הסוף.",
       },
     ],
     technologies: ["JavaScript", "HTML5", "CSS3", "PWA", "Linux", "Bash", "Playwright", "Docker", "GitHub Actions", "Lighthouse CI"],
