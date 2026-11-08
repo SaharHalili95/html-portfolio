@@ -32,7 +32,7 @@ Every project is live and opens in one tap, and the code backs every claim: test
 - React, TypeScript and Vite; HashRouter (in-page anchors must scroll, not change the route).
 - English and Hebrew, with a language switch and full right-to-left layout in Hebrew.
 - The Rambo pages (`/rambo`, `/pitbull-products`) are a separate awareness project and keep their own design.
-- Facts on the site must match the code of each project and must not contradict any submitted CV. Military service is described only by what every CV version shares: IDF C4I Corps, system installation and troubleshooting, user permissions, secure data transfer.
+- Facts on the site must match the code of each project and must not contradict any submitted CV. Military service stays general: IDF C4I Corps, computer systems, networks and user permissions.
 
 ## Brand Commitments
 
