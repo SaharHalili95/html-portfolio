@@ -1,7 +1,7 @@
 import "@fontsource-variable/frank-ruhl-libre/index.css";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { education, experience, military, profile, projects, skills, type Lang, type Project } from "../data/site";
+import { education, experience, military, profile, projects, type Lang, type Project } from "../data/site";
 import { getImagePath } from "../utils/paths";
 import { useLang } from "./lang";
 import ProjectGraph, { type GraphNode, type Group } from "./ProjectGraph";
@@ -24,6 +24,9 @@ const copy: Record<Lang, Record<string, string>> = {
     copy: "copy",
     copied: "copied",
     open: "Open it",
+    more: "more",
+    smaller: "Smaller projects",
+    mail: "Email",
     now: "Present",
     freelance: "Freelance software developer",
     graph: "Map of my main projects",
@@ -44,6 +47,9 @@ const copy: Record<Lang, Record<string, string>> = {
     copy: "העתקה",
     copied: "הועתק",
     open: "לפתיחה",
+    more: "עוד",
+    smaller: "פרויקטים קטנים",
+    mail: "מייל",
     now: "היום",
     freelance: "מפתח תוכנה כפרילנסר",
     graph: "מפה של הפרויקטים המרכזיים שלי",
@@ -53,6 +59,18 @@ const copy: Record<Lang, Record<string, string>> = {
 const SECURITY = ["hardengarden", "netsentinel"];
 const LEARNING = ["linuxmaster", "easymat"];
 const byId = (ids: string[]) => ids.map((id) => projects.find((p) => p.id === id)!);
+
+const MAIN_OTHER = ["salarynet", "salsmart", "codemate", "meshmind", "nitaibot"];
+const CORE_TECH = ["C#", ".NET", "TypeScript", "React", "Python", "FastAPI", "SQL Server", "PostgreSQL", "Linux", "Docker", "Kubernetes", "Claude API", "RAG", "Playwright", "GitHub Actions"];
+
+const PROOF: Record<string, Record<Lang, string>> = {
+  hardengarden: { en: "12 checks, signed releases, fixes tested on 3 Linux versions", he: "12 בדיקות, גרסאות חתומות, תיקונים שנבדקו על 3 גרסאות לינוקס" },
+  netsentinel: { en: "Live alerts over WebSocket, no WCAG 2.1 AA issues in axe", he: "התראות חיות ב-WebSocket, axe לא מוצא בעיות WCAG 2.1 AA" },
+  linuxmaster: { en: "80 units, 3 certification tracks, 3 mock exams", he: "80 יחידות, 3 מסלולי הסמכה, 3 מבחני דמה" },
+  easymat: { en: "Over 100 tests, about 90% lower model cost with prompt caching", he: "יותר מ-100 בדיקות, חיסכון של כ-90% בעלות המודל עם prompt caching" },
+  salarynet: { en: "162 xUnit tests, Vue 3 and Angular front ends", he: "162 בדיקות xUnit, ממשקי Vue 3 ו-Angular" },
+  salsmart: { en: "1.6 million prices per run, deployed to Kubernetes in CI", he: "1.6 מיליון מחירים בכל הרצה, פריסה ל-Kubernetes ב-CI" },
+};
 
 const LAYOUT: [string, Group, number, number][] = [
   ["hardengarden", "security", 0.74, 0.16],
@@ -68,26 +86,21 @@ function Row({ p, c, pick, onActive }: { p: Project; c: Record<string, string>; 
   const image = p.image ? getImagePath(p.image) : undefined;
   return (
     <li
-      className="row"
+      className={PROOF[p.id] ? "row is-main" : "row"}
       onPointerEnter={(e) => { if (e.pointerType === "mouse") onActive(p.id); }}
       onPointerLeave={(e) => { if (e.pointerType === "mouse") onActive(null); }}
     >
-      <p>
+      <p className="title">
         <a href={href} className="name">{p.title}</a>
-        <span className="sep"> · </span>
-        {pick(p.tagline)}
-        {p.link && (
-          <>
-            <span className="sep"> · </span>
-            <a href={p.link} className="quiet">{c.code}</a>
-          </>
-        )}
+        {p.link && <a href={p.link} className="quiet code">{c.code}</a>}
       </p>
+      <p className="tag">{pick(p.tagline)}</p>
+      {PROOF[p.id] && <p className="proof">{pick(PROOF[p.id])}</p>}
       {p.highlights && (
         <details>
           <summary>
             <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" /></svg>
-            {c.details}
+            {c.more}
           </summary>
           <div className="more">
             {image && <img src={image} alt="" loading="lazy" className={p.imageKind === "phone" ? "is-phone" : undefined} />}
@@ -129,7 +142,7 @@ function CopyEmail({ idle, done }: { idle: string; done: string }) {
 export default function Personal() {
   const { lang, pick, toggle } = useLang();
   const c = copy[lang];
-  const other = projects.filter((p) => !SECURITY.includes(p.id) && !LEARNING.includes(p.id));
+  const small = projects.filter((p) => !SECURITY.includes(p.id) && !LEARNING.includes(p.id) && !MAIN_OTHER.includes(p.id));
   const [active, setActive] = useState<string | null>(null);
   const [focus, setFocus] = useState<Group | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -186,6 +199,12 @@ export default function Personal() {
           <h1 className="in" style={{ "--d": 0 } as React.CSSProperties}>{pick(profile.name)}</h1>
           <p className="lead in" style={{ "--d": 1 } as React.CSSProperties}>{c.intro}</p>
           <p className="in" style={{ "--d": 2 } as React.CSSProperties}>{c.looking}</p>
+          <p className="links top in" style={{ "--d": 3 } as React.CSSProperties}>
+            <a href={`mailto:${profile.email}`}>{c.mail}</a>
+            <a href={profile.linkedin}>LinkedIn</a>
+            <a href={profile.github}>GitHub</a>
+            <a href={getImagePath(profile.cv)} download>{c.cv}</a>
+          </p>
         </div>
 
         <aside className="map">
@@ -193,17 +212,24 @@ export default function Personal() {
         </aside>
 
         <div ref={content} className="content">
-          <section className="in" style={{ "--d": 3 } as React.CSSProperties} data-group="security">
+          <section className="in" style={{ "--d": 4 } as React.CSSProperties} data-group="security">
             <h2 className="is-security">{c.security}</h2>
             <ul className="rows">{byId(SECURITY).map((p) => <Row key={p.id} p={p} c={c} pick={pick} onActive={setActive} />)}</ul>
           </section>
-          <section className="in" style={{ "--d": 4 } as React.CSSProperties} data-group="learning">
+          <section className="in" style={{ "--d": 5 } as React.CSSProperties} data-group="learning">
             <h2 className="is-learning">{c.learning}</h2>
             <ul className="rows">{byId(LEARNING).map((p) => <Row key={p.id} p={p} c={c} pick={pick} onActive={setActive} />)}</ul>
           </section>
           <section className="reveal" data-group="other">
             <h2 className="is-other">{c.other}</h2>
-            <ul className="rows">{other.map((p) => <Row key={p.id} p={p} c={c} pick={pick} onActive={setActive} />)}</ul>
+            <ul className="rows">{byId(MAIN_OTHER).map((p) => <Row key={p.id} p={p} c={c} pick={pick} onActive={setActive} />)}</ul>
+            <details className="smaller">
+              <summary>
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" /></svg>
+                {c.smaller}
+              </summary>
+              <ul className="rows">{small.map((p) => <Row key={p.id} p={p} c={c} pick={pick} onActive={setActive} />)}</ul>
+            </details>
           </section>
 
           <section className="reveal">
@@ -224,7 +250,7 @@ export default function Personal() {
 
           <section className="reveal">
             <h2>{c.tech}</h2>
-            <p dir="ltr" className="tech">{skills.flatMap((g) => g.items).join(", ")}</p>
+            <p dir="ltr" className="tech">{CORE_TECH.join(", ")}</p>
           </section>
 
           <section className="reveal">
