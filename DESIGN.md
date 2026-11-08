@@ -8,7 +8,7 @@ A personal page, not a product landing page. It reads like the sites of serious 
 
 ## Colors
 
-Warm paper `#fbfaf7`, ink `#181a1f`, secondary `#5b5f68`. Color has one job, the project groups: security `#0b7f6d`, learning `#b0640b`, other `#465478`.
+Pastel green paper `#dcefe0`, ink `#181a1f`, secondary `#5b5f68`. Color has one job, the project groups: security `#0a6f5f`, learning `#b0640b`, other `#465478`.
 
 ## Typography
 
