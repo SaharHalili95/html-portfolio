@@ -1,10 +1,11 @@
+import { lazy, Suspense } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./site/Personal";
 import { LangProvider } from "./site/lang";
-import Rambo from "./components/Rambo";
-import PitbullProducts from "./components/PitbullProducts";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./App.css";
+
+const Rambo = lazy(() => import("./components/Rambo"));
+const PitbullProducts = lazy(() => import("./components/PitbullProducts"));
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
             </LangProvider>
           }
         />
-        <Route path="/rambo" element={<Rambo />} />
-        <Route path="/pitbull-products" element={<PitbullProducts />} />
+        <Route path="/rambo" element={<Suspense fallback={null}><Rambo /></Suspense>} />
+        <Route path="/pitbull-products" element={<Suspense fallback={null}><PitbullProducts /></Suspense>} />
       </Routes>
     </HashRouter>
   );
