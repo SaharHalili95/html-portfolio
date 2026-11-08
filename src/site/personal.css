@@ -39,9 +39,9 @@ html:has(.page), body:has(.page) { background: #fbfaf7 !important; scrollbar-col
 .page h1 { margin: 0 0 22px; font-family: var(--serif); font-size: clamp(3rem, 6.2vw, 5rem); font-weight: 500; line-height: 1; letter-spacing: -.028em; }
 [lang="he"] .page h1 { letter-spacing: -.012em; }
 .page .lead { font-family: var(--serif); font-size: clamp(1.3125rem, 1.9vw, 1.5625rem); line-height: 1.36; letter-spacing: -.008em; margin-bottom: 16px; }
-.page .intro p:last-child { color: var(--soft); font-size: 1.0625rem; }
-.page section { margin-top: 48px; }
-.page h2 { display: flex; align-items: center; gap: 9px; margin: 0 0 14px; font-size: 1rem; font-weight: 600; }
+.page .lead + p { color: var(--soft); font-size: 1.0625rem; }
+.page section { margin-top: 60px; }
+.page h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; font-family: var(--serif); font-size: 1.5rem; font-weight: 500; letter-spacing: -.012em; line-height: 1.2; }
 .page h2.is-security::before, .page h2.is-learning::before, .page h2.is-other::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
 .page h2.is-security { --dot: var(--security); }
 .page h2.is-learning { --dot: var(--learning); }
@@ -92,9 +92,18 @@ html:has(.page), body:has(.page) { background: #fbfaf7 !important; scrollbar-col
 .glimpse img[data-on="true"] { opacity: 1; transform: none; filter: none; }
 
 .page .rows { list-style: none; margin: 0; padding: 0; }
-.page .row { margin-bottom: 10px; transition: opacity 180ms ease; }
+.page .row { margin-bottom: 16px; transition: opacity 180ms ease; }
+.page .row.is-main { margin-bottom: 26px; }
 .page .row > p { margin: 0; }
-.page .name { font-weight: 550; }
+.page .title { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.page .name { font-weight: 600; }
+.page .is-main .name { font-family: var(--serif); font-size: 1.3125rem; font-weight: 500; letter-spacing: -.008em; }
+.page .code { font-size: .875rem; }
+.page .proof { color: var(--soft); font-size: .9375rem; }
+.page .links.top { margin-top: 20px; }
+.page .smaller { margin-top: 18px; }
+.page .smaller > summary { font-size: .9375rem; }
+.page .smaller .rows { padding-top: 12px; }
 .page .sep { color: #a5a196; }
 @media (hover: hover) and (pointer: fine) {
   .page a:hover { text-decoration-color: var(--ink); }
