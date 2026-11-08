@@ -76,4 +76,4 @@ src/
 
 ## License
 
-MIT
+The MIT License covers the source code only. Photos, the CV, personal details and written content are not licensed for reuse.

@@ -169,18 +169,18 @@ export const military = {
   period: "2014–2017",
   points: [
     {
-      en: "Installed, configured and troubleshot command-and-control systems, workstations and network connectivity in operational sites.",
-      he: "התקנה, הגדרה ופתרון תקלות במערכות שליטה ובקרה, בעמדות עבודה ובקישוריות רשת באתרים מבצעיים.",
+      en: "Installed, configured and troubleshot computer systems, workstations and network connectivity.",
+      he: "התקנה, הגדרה ופתרון תקלות במערכות מחשב, בעמדות עבודה ובקישוריות רשת.",
     },
     {
-      en: "Managed user accounts and permissions, and handled secure data transfer between classified and unclassified networks.",
-      he: "ניהול משתמשים והרשאות, והעברת מידע מאובטחת בין רשתות מסווגות ולא מסווגות.",
+      en: "Managed user accounts and permissions.",
+      he: "ניהול משתמשים והרשאות.",
     },
   ] as Text[],
   reservePeriod: { en: "2017–Present", he: "2017–היום" } as Text,
   reserve: {
-    en: "Set up operations rooms from scratch (computing, communications and connectivity) and maintain IT infrastructure.",
-    he: "הקמת חדרי מבצעים מאפס (מחשוב, תקשורת וקישוריות) ותחזוקת תשתיות IT.",
+    en: "Set up and maintain computing and communications infrastructure.",
+    he: "הקמה ותחזוקה של תשתיות מחשוב ותקשורת.",
   } as Text,
 };
 
