@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
       <figure className="hero-stage" aria-label={t.heroAlt}>
         <div className="device device-desktop">
-          <img src={getImagePath("/images/projects/salarynet.webp")} alt="" width="960" height="600" fetchPriority="high" />
+          <img src={getImagePath("/images/projects/netsentinel.webp")} alt="" width="960" height="600" fetchPriority="high" />
         </div>
         <div className="device device-phone">
           <img src={getImagePath("/images/projects/linuxmaster.webp")} alt="" width="447" height="760" />
