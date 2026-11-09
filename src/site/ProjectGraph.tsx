@@ -10,7 +10,7 @@ export interface GraphNode {
   y: number;
 }
 
-const COLOR: Record<Group, string> = { security: "10,111,95", learning: "190,108,12", other: "70,84,120" };
+const COLOR: Record<Group, string> = { security: "78,205,178", learning: "238,170,79", other: "163,180,230" };
 
 interface Body {
   x: number; y: number; vx: number; vy: number; rx: number; ry: number;
@@ -135,14 +135,14 @@ export default function ProjectGraph({ nodes, active, focus, onActive, label, op
       ctx.clearRect(0, 0, w, h);
       const meshIn = reduce ? 1 : Math.min(t / 1.1, 1);
       ctx.lineWidth = 1;
-      ctx.strokeStyle = `rgba(24,84,66,${0.075 * meshIn})`;
+      ctx.strokeStyle = `rgba(170,220,195,${0.075 * meshIn})`;
       ctx.beginPath();
       for (const [i, j] of meshEdges) {
         ctx.moveTo(mesh[i].x, mesh[i].y);
         ctx.lineTo(mesh[j].x, mesh[j].y);
       }
       ctx.stroke();
-      ctx.fillStyle = `rgba(24,84,66,${0.2 * meshIn})`;
+      ctx.fillStyle = `rgba(170,220,195,${0.2 * meshIn})`;
       for (const m of mesh) {
         ctx.beginPath();
         ctx.arc(m.x, m.y, 1.3, 0, 7);

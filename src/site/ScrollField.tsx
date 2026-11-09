@@ -5,10 +5,10 @@ import type { Group } from "./ProjectGraph";
 type Tint = [number, number, number];
 
 const TINT: Record<Group | "none", Tint> = {
-  none: [24, 92, 72],
-  security: [10, 111, 95],
-  learning: [176, 100, 11],
-  other: [70, 84, 120],
+  none: [150, 210, 180],
+  security: [78, 205, 178],
+  learning: [238, 170, 79],
+  other: [163, 180, 230],
 };
 
 const RINGS = [
@@ -93,7 +93,7 @@ export default function ScrollField({ focus, lang, text }: Props) {
         }
       }
       ctx.lineWidth = major ? 1.3 : 0.8;
-      ctx.strokeStyle = `rgba(${tint.join(",")},${major ? 0.34 : 0.2})`;
+      ctx.strokeStyle = `rgba(${tint.join(",")},${major ? 0.24 : 0.13})`;
       ctx.stroke();
     };
 
@@ -109,12 +109,12 @@ export default function ScrollField({ focus, lang, text }: Props) {
         ctx.lineWidth = 1;
         ctx.setLineDash([3, 7]);
         ctx.lineDashOffset = pos * ring.s * 0.4 * ring.turn;
-        ctx.strokeStyle = `rgba(${color},.3)`;
+        ctx.strokeStyle = `rgba(${color},.22)`;
         ctx.beginPath();
         ctx.arc(cx, cy, r, 0, Math.PI * 2);
         ctx.stroke();
         ctx.setLineDash([]);
-        ctx.strokeStyle = `rgba(${color},.2)`;
+        ctx.strokeStyle = `rgba(${color},.14)`;
         ctx.beginPath();
         ctx.arc(cx, cy, r * 0.62, 0, Math.PI * 2);
         ctx.stroke();
