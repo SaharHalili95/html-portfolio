@@ -32,7 +32,7 @@ export const ui = {
     availability: "Available for freelance projects",
     heroAlt: "NetSentinel dashboard on a desktop and Linux Master on a phone",
     workTitle: "Projects",
-    workIntro: "You can try each of these and read its code.",
+    workIntro: "Explore my projects, with demos and source code where available.",
     demo: "Open the live demo",
     code: "Read the code",
     visit: "Visit the site",
@@ -72,7 +72,7 @@ export const ui = {
     availability: "פנוי לפרויקטים כפרילנסר",
     heroAlt: "לוח הבקרה של NetSentinel במחשב, ו-Linux Master בטלפון",
     workTitle: "פרויקטים",
-    workIntro: "אפשר לנסות כל אחד מהם ולקרוא את הקוד שלו.",
+    workIntro: "הפרויקטים שלי, עם דמו וקוד כשיש קישור זמין.",
     demo: "לפתיחת הדמו החי",
     code: "לקוד",
     visit: "לאתר",
@@ -191,7 +191,9 @@ export const education = {
 };
 
 export const skills: { label: Text; items: string[] }[] = [
-  { label: { en: "Languages", he: "שפות" }, items: ["TypeScript", "JavaScript", "C#", "Python", "SQL", "Bash"] },
+  { label: { en: "Languages", he: "שפות" }, items: ["Python", "TypeScript", "JavaScript", "C#", "Kotlin", "SQL", "Bash"] },
+  { label: { en: "Academic C++", he: "C++ מהתואר" }, items: ["C++", "OOP", "Pointers", "Dynamic memory", "Data structures"] },
+  { label: { en: "Android development", he: "פיתוח Android" }, items: ["Kotlin", "Android Studio", "Room", "Retrofit", "ViewModel", "Coroutines"] },
   { label: { en: "Front end", he: "צד לקוח" }, items: ["React", "Next.js", "Vue 3", "Angular", "Tailwind CSS"] },
   { label: { en: "Back end and data", he: "צד שרת ונתונים" }, items: [".NET 8", "ASP.NET Core", "EF Core", "FastAPI", "Node.js", "REST APIs", "SQL Server", "PostgreSQL", "Redis", "MongoDB", "RabbitMQ"] },
   { label: { en: "AI", he: "AI" }, items: ["Claude API", "OpenAI API", "RAG", "Embeddings", "Pinecone", "ChromaDB", "Ollama", "Claude Code"] },
@@ -217,6 +219,21 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: "workoutapp",
+    title: "WorkoutApp",
+    tagline: { en: "An Android workout planner built with Kotlin", he: "אפליקציית Android לתכנון אימונים ב-Kotlin" },
+    summary: {
+      en: "An Android project built in Android Studio. Users plan workouts by day, time, difficulty and muscle group, keep favorite workouts and manage a profile. The project is currently local; there is no public demo or repository.",
+      he: "פרויקט Android שנבנה ב-Android Studio. מתכננים אימונים לפי יום, שעה, רמת קושי וקבוצת שרירים, שומרים אימונים מועדפים ומנהלים פרופיל. הפרויקט כרגע מקומי, ללא דמו או ריפו ציבורי.",
+    },
+    highlights: [
+      { en: "Room stores profiles, workouts and favorites locally, with repositories separating storage from the UI.", he: "Room שומר פרופילים, אימונים ומועדפים מקומית, עם שכבת Repository שמפרידה בין הנתונים לממשק." },
+      { en: "Retrofit fetches exercises from an API; ViewModels, LiveData and coroutines manage UI state and asynchronous work.", he: "Retrofit שולף תרגילים מ-API; נעשה שימוש ב-ViewModels, ב-LiveData וב-coroutines לניהול מצב הממשק ועבודה אסינכרונית." },
+      { en: "Camera and gallery integration lets users choose a profile photo.", he: "חיבור למצלמה ולגלריה מאפשר לבחור תמונת פרופיל." },
+    ],
+    technologies: ["Kotlin", "Android", "Android Studio", "Room", "Retrofit", "ViewModel", "Coroutines"],
+  },
   {
     id: "hardengarden",
     title: "HardenGarden",

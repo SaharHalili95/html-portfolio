@@ -92,7 +92,7 @@ function Row({ p, c, pick, onActive }: { p: Project; c: Record<string, string>; 
       onPointerLeave={(e) => { if (e.pointerType === "mouse") onActive(null); }}
     >
       <p className="title">
-        <a href={href} className="name">{p.title}</a>
+        {href ? <a href={href} className="name">{p.title}</a> : <span className="name">{p.title}</span>}
         {p.link && <a href={p.link} className="quiet code">{c.code}</a>}
       </p>
       <p className="tag">{pick(p.tagline)}</p>
